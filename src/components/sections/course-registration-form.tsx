@@ -21,10 +21,10 @@ export function CourseRegistrationForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Info Side */}
           <div className="p-8 md:p-16 bg-primary text-primary-foreground relative overflow-hidden">
-             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-              <div className="absolute top-[-10%] right-[-10%] w-64 h-64 bg-white rounded-full blur-3xl" />
-              <div className="absolute bottom-[-10%] left-[-10%] w-64 h-64 bg-white rounded-full blur-3xl" />
+             {/* Floating Elements Background */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-[-10%] right-[-10%] w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-[-10%] left-[-10%] w-64 h-64 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
             </div>
 
             <div className="relative z-10">

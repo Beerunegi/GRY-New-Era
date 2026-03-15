@@ -20,37 +20,37 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
+  --background: #000000;
+  --foreground: #ffffff;
 
-  --primary: #4338ca; /* Deep Indigo */
-  --secondary: #0ea5e9; /* Light Blue */
+  --primary: #9333ea; /* Vibrant Purple */
+  --secondary: #a855f7; /* Lighter Purple */
 
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted: #111111;
+  --muted-foreground: #a1a1aa;
 }
 
 .dark {
-  --background: #030712; /* Very deep gray/blue */
-  --foreground: #f9fafb;
+  --background: #000000; 
+  --foreground: #ffffff;
   
-  --primary: #6366f1;
-  --secondary: #38bdf8;
+  --primary: #9333ea;
+  --secondary: #a855f7;
 
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
+  --muted: #111111;
+  --muted-foreground: #a1a1aa;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #030712;
-    --foreground: #f9fafb;
+    --background: #000000;
+    --foreground: #ffffff;
     
-    --primary: #6366f1;
-    --secondary: #38bdf8;
+    --primary: #9333ea;
+    --secondary: #a855f7;
 
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
+    --muted: #111111;
+    --muted-foreground: #a1a1aa;
   }
 }
 
