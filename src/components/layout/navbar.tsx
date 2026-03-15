@@ -28,7 +28,7 @@ const navLinks = [
   },
   { name: "Courses", href: "/courses" },
   { name: "Why Us", href: "/#why-us" },
-  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -60,7 +60,12 @@ export function Navbar() {
           <div className="bg-primary text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
             <Rocket className="w-5 h-5" />
           </div>
-          <span className="font-bold text-xl tracking-tight">NEW DIGITAL ERA</span>
+          <span className={cn(
+            "font-bold text-xl tracking-tight transition-colors",
+            isScrolled ? "text-foreground" : "text-white"
+          )}>
+            NEW DIGITAL ERA
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -69,7 +74,12 @@ export function Navbar() {
             <div key={link.name} className="relative group">
               <Link
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-1"
+                className={cn(
+                  "text-sm font-medium transition-colors py-2 flex items-center gap-1",
+                  isScrolled 
+                    ? "text-muted-foreground hover:text-primary" 
+                    : "text-white/80 hover:text-white"
+                )}
               >
                 {link.name}
                 {link.submenu && <ChevronDown className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform" />}
@@ -98,12 +108,20 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <Button>Get Consultation</Button>
+          <Button className={cn(
+            "shadow-md",
+            !isScrolled && "bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20"
+          )}>
+            Get Consultation
+          </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className={cn(
+            "md:hidden p-2 transition-colors",
+            isScrolled ? "text-foreground" : "text-white"
+          )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

@@ -32,9 +32,9 @@ const Accordion = ({ children, type = "single", collapsible = true, className }:
   );
 };
 
-const AccordionItem = ({ className, children, isOpen, toggle }: any) => {
+const AccordionItem = ({ className, children, isOpen, toggle, ...props }: any) => {
   return (
-    <div className={cn("border-b overflow-hidden", className)}>
+    <div className={cn("border-b overflow-hidden", className)} {...props}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child as React.ReactElement<any>, { isOpen, toggle });
@@ -45,7 +45,7 @@ const AccordionItem = ({ className, children, isOpen, toggle }: any) => {
   );
 };
 
-const AccordionTrigger = ({ className, children, isOpen, toggle }: any) => {
+const AccordionTrigger = ({ className, children, isOpen, toggle, ...props }: any) => {
   return (
     <button
       type="button"
@@ -54,6 +54,7 @@ const AccordionTrigger = ({ className, children, isOpen, toggle }: any) => {
         "flex flex-1 w-full items-center justify-between py-4 font-medium transition-all",
         className
       )}
+      {...props}
     >
       {children}
       <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-200", isOpen && "rotate-180")} />

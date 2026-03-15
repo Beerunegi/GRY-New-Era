@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizeFonts: false,
+  },
 };
 
 export default nextConfig;
