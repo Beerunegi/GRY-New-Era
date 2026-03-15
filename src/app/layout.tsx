@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Gravity | Digital Marketing Agency",
+  title: "New Digital Era | Digital Marketing Agency",
   description: "We help ambitious businesses scale through data-driven digital marketing and premium web experiences.",
 };
 

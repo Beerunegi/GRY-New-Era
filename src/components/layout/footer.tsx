@@ -13,7 +13,7 @@ export function Footer() {
               <div className="bg-primary text-primary-foreground p-2 rounded-lg">
                 <Rocket className="w-5 h-5" />
               </div>
-              <span className="font-bold text-xl tracking-tight">GRAVITY</span>
+              <span className="font-bold text-xl tracking-tight">NEW DIGITAL ERA</span>
             </Link>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
               We help ambitious businesses scale through data-driven digital marketing and premium web experiences.
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Gravity Digital. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} New Digital Era. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>

@@ -55,7 +55,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-1">Email</h4>
-                <p className="text-muted-foreground">hello@gravityagency.com</p>
+                <p className="text-muted-foreground">hello@newdigitalera.com</p>
                 <p className="text-sm text-muted-foreground">We usually respond within 24 hours.</p>
               </div>
             </div>

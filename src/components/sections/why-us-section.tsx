@@ -39,7 +39,7 @@ export function WhyUsSection() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Why Ambitious Brands <br />
-            <span className="text-primary">Choose Gravity</span>
+            <span className="text-primary">Choose New Digital Era</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 text-balance">
             We operate as an extension of your own team. We care about your bottom line as much as you do, combining creativity with hardcore analytics to guarantee success.

@@ -70,7 +70,7 @@ export function CourseSection() {
           className="order-1 lg:order-2"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-medium text-sm mb-6">
-            <GraduationCap className="w-4 h-4" /> Gravity Academy
+            <GraduationCap className="w-4 h-4" /> New Digital Era Academy
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 mt-2">

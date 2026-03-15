@@ -6,7 +6,7 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Gravity transformed our entire business model. Their paid social strategies alone 5x'd our revenue in less than a year. They are aggressive, analytical, and relentless.",
+    quote: "New Digital Era transformed our entire business model. Their paid social strategies alone 5x'd our revenue in less than a year. They are aggressive, analytical, and relentless.",
     author: "Sarah Jenkins",
     role: "CMO, E-Commerce Brand",
     rating: 5,
@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "We've worked with 4 agencies before Gravity. None of them provided the transparency and ROI that this team delivers. True partners in every sense.",
+    quote: "We've worked with 4 agencies before New Digital Era. None of them provided the transparency and ROI that this team delivers. True partners in every sense.",
     author: "Michael Ross",
     role: "VP Marketing, Enterprise Solutions",
     rating: 5,
