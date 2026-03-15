@@ -15,7 +15,6 @@ const caseStudies = [
       { label: "CPA Reduction", value: "-42%" },
       { label: "New Users", value: "1.2M+" },
     ],
-    color: "bg-blue-500",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -26,7 +25,6 @@ const caseStudies = [
       { label: "ROAS", value: "5.8x" },
       { label: "Conversion Rate", value: "+115%" },
     ],
-    color: "bg-emerald-500",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
   },
   {
@@ -37,7 +35,6 @@ const caseStudies = [
       { label: "Organic Traffic", value: "+210%" },
       { label: "MQLs Generated", value: "850+" },
     ],
-    color: "bg-purple-500",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
   },
 ];

@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Courses", href: "#courses" },
-  { name: "Why Us", href: "#why-us" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Courses", href: "/courses" },
+  { name: "Why Us", href: "/#why-us" },
+  { name: "Portfolio", href: "/#portfolio" },
 ];
 
 export function Navbar() {
@@ -59,9 +59,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="hidden lg:flex">
-            Login
-          </Button>
+
           <Button>Get Consultation</Button>
         </div>
 
@@ -88,9 +86,7 @@ export function Navbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <Button variant="outline" className="w-full">
-              Login
-            </Button>
+
             <Button className="w-full">Get Consultation</Button>
           </div>
         </div>

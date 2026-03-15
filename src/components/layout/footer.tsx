@@ -38,22 +38,23 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6">Services</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><Link href="#" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Google Ads / PPC</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Social Media Marketing</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Website Design</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Brand Identity</Link></li>
+              <li><Link href="/services/seo" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
+              <li><Link href="/services/ppc" className="hover:text-primary transition-colors">Google Ads / PPC</Link></li>
+              <li><Link href="/services/social-media" className="hover:text-primary transition-colors">Social Media Marketing</Link></li>
+              <li><Link href="/services/ai-optimization" className="hover:text-primary transition-colors">AI Optimization (AIO)</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Website Design</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Brand Identity</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold mb-6">Company</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Case Studies</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Blog & Insights</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/courses" className="hover:text-primary transition-colors">Our Academy</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
+              <li><Link href="/#blog" className="hover:text-primary transition-colors">Blog & Insights</Link></li>
+              <li><Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

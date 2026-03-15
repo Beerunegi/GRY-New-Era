@@ -2,50 +2,63 @@
 
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/section";
+import Link from "next/link";
 import { 
   Search, 
   MousePointerClick, 
   Share2, 
   PenTool, 
   Code2, 
-  Sparkles 
+  Sparkles,
+  Bot
 } from "lucide-react";
 
 const services = [
   {
+    title: "AI Optimization (AIO)",
+    description: "Future-proof your brand for the era of AI search engines like Perplexity and Gemini.",
+    icon: Bot,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/ai-optimization"
+  },
+  {
     title: "SEO Optimization",
     description: "Dominate search rankings and drive organic traffic that converts into loyal customers.",
     icon: Search,
-    color: "text-blue-500",
-    bg: "bg-blue-500/10",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
+    href: "/services/seo"
   },
   {
     title: "Google Ads / PPC",
     description: "High-ROI paid campaigns targeted mathematically to maximize your reach and revenue.",
     icon: MousePointerClick,
-    color: "text-emerald-500",
-    bg: "bg-emerald-500/10",
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/ppc"
   },
   {
     title: "Social Media Marketing",
     description: "Engaging social campaigns that build brand authority and community across platforms.",
     icon: Share2,
-    color: "text-purple-500",
-    bg: "bg-purple-500/10",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
+    href: "/services/social-media"
   },
   {
     title: "Website Design",
     description: "Stunning, conversion-focused UI/UX design tailored to represent your premium brand.",
     icon: PenTool,
-    color: "text-pink-500",
-    bg: "bg-pink-500/10",
+    color: "text-primary",
+    bg: "bg-primary/10",
   },
   {
     title: "Website Development",
     description: "Lightning-fast, scalable web applications built with modern frameworks and best practices.",
     icon: Code2,
-    color: "text-orange-500",
-    bg: "bg-orange-500/10",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
   },
   {
     title: "Branding & Creative",
@@ -93,19 +106,30 @@ export function ServicesSection() {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="group relative p-8 rounded-2xl border border-border/50 bg-card hover:bg-muted/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 overflow-hidden"
           >
-            <div className={`w-14 h-14 rounded-xl ${service.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-              <service.icon className={`w-7 h-7 ${service.color}`} />
-            </div>
-            
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {service.description}
-            </p>
+            <Link 
+              href={service.href || "#"} 
+              className="group relative block p-8 rounded-2xl border border-border/50 bg-card hover:bg-muted/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 overflow-hidden h-full"
+            >
+              <div className={`w-14 h-14 rounded-xl ${service.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className={`w-7 h-7 ${service.color}`} />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {service.description}
+              </p>
 
-            {/* Hover subtle glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              {/* Hover indicator link icon if it has a page */}
+              {service.href && (
+                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                </div>
+              )}
+
+              {/* Hover subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            </Link>
           </motion.div>
         ))}
       </motion.div>
