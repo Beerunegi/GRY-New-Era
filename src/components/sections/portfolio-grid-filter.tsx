@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import Image from "next/image";
+import Link from "next/link";
 import { ExternalLink, Search } from "lucide-react";
 
 // Project categories
@@ -13,60 +14,92 @@ const categories: Category[] = ["All", "SEO", "Web Design", "Development", "Mark
 
 const projects = [
   {
+    id: 101,
+    title: "Motherland Groceries Growth",
+    category: "Marketing",
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop",
+    stats: "+45% Sales",
+    link: "/portfolio/motherland-groceries"
+  },
+  {
+    id: 102,
+    title: "Eco Luxe Decor E-commerce",
+    category: "SEO",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
+    stats: "$2.5k/mo Revenue",
+    link: "/portfolio/eco-luxe-decor"
+  },
+  {
+    id: 103,
+    title: "The Dental Port Web Dev",
+    category: "Web Design",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
+    stats: "150% More Leads",
+    link: "/portfolio/the-dental-port"
+  },
+  {
     id: 1,
     title: "Global FinTech Platform Redesign",
     category: "Web Design",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    stats: "+124% Conversion Rate"
+    stats: "+124% Conversion Rate",
+    link: ""
   },
   {
     id: 2,
     title: "Eco-Brand Organic Dominance",
     category: "SEO",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-    stats: "2.1M Organic Monthly Visitors"
+    stats: "2.1M Organic Monthly Visitors",
+    link: ""
   },
   {
     id: 3,
     title: "Luxury Real Estate Portal",
     category: "Development",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
-    stats: "< 0.8s Page Load Time"
+    stats: "< 0.8s Page Load Time",
+    link: ""
   },
   {
     id: 4,
     title: "SaaS Omnichannel Launch",
     category: "Marketing",
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop",
-    stats: "$4M Pipeline Generated"
+    stats: "$4M Pipeline Generated",
+    link: ""
   },
   {
     id: 5,
     title: "B2B Manufacturer Replatforming",
     category: "Development",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
-    stats: "Legacy to Next.js Migration"
+    stats: "Legacy to Next.js Migration",
+    link: ""
   },
   {
     id: 6,
     title: "Local Services Franchise SEO",
     category: "SEO",
     image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=800&auto=format&fit=crop",
-    stats: "Top 3 Map Pack in 40 Cities"
+    stats: "Top 3 Map Pack in 40 Cities",
+    link: ""
   },
   {
     id: 7,
     title: "Health & Wellness D2C Store",
     category: "Web Design",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop",
-    stats: "28% Decrease in Cart Abandonment"
+    stats: "28% Decrease in Cart Abandonment",
+    link: ""
   },
   {
     id: 8,
     title: "Tech Startup Series B Campaigns",
     category: "Marketing",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
-    stats: "75% Lower CPA"
+    stats: "75% Lower CPA",
+    link: ""
   }
 ];
 
@@ -109,6 +142,13 @@ export function PortfolioGridFilter() {
               transition={{ duration: 0.4, type: "spring", bounce: 0.2 }}
               className="group relative rounded-3xl overflow-hidden bg-card border border-border aspect-[4/3] cursor-pointer"
             >
+              {/* Clickable Area */}
+              {project.link ? (
+                <Link href={project.link} className="absolute inset-0 z-30 opacity-0 cursor-pointer">
+                  {project.title}
+                </Link>
+              ) : null}
+
               {/* Image */}
               <Image 
                 src={project.image} 
@@ -118,19 +158,19 @@ export function PortfolioGridFilter() {
               />
               
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none" />
               
               {/* Hover Badge */}
-              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-sm font-bold border border-white/10 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-sm font-bold border border-white/10 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
                 View Project
               </div>
 
-              <div className="absolute top-6 left-6 w-10 h-10 bg-primary/90 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 shadow-xl">
+              <div className="absolute top-6 left-6 w-10 h-10 bg-primary/90 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 shadow-xl pointer-events-none">
                  <Search className="w-4 h-4 text-white" />
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
                 <div className="text-primary font-bold text-sm uppercase tracking-wider mb-2 drop-shadow-md">
                   {project.category}
                 </div>
