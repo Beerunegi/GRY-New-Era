@@ -1,161 +1,90 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Section } from "@/components/layout/section";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import Script from "next/script";
 
-const services = [
+const faqs = [
   {
-    title: "AI Optimization (AIO)",
-    description:
-      "Future-proof your brand for the era of AI search engines like Perplexity and Gemini.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop",
-    href: "/services/ai-optimization",
+    question: "What is Generative Engine Optimization (GEO)?",
+    answer: "GEO is a strategy focused on optimizing your digital presence for generative AI engines like ChatGPT, Gemini, and Google AI Overviews. It ensures your brand is accurately cited and recommended in AI-generated responses."
   },
   {
-    title: "Conversion Rate Optimization",
-    description:
-      "Turn visitors into loyal customers with data-driven strategies and A/B testing.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
-    href: "/services/conversion-rate-optimization",
+    question: "How does GEO differ from traditional SEO?",
+    answer: "While SEO focuses on ranking links on search engine results pages (SERPs), GEO focuses on being the primary source of truth that AI models use to generate direct answers for users."
   },
   {
-    title: "SEO Optimization",
-    description:
-      "Dominate search rankings and drive organic traffic that converts into loyal customers.",
-    image:
-      "https://images.unsplash.com/photo-1572177812156-58036aae439c?q=80&w=600&auto=format&fit=crop",
-    href: "/services/seo",
+    question: "Why should my business invest in GEO now?",
+    answer: "Search behavior is shifting towards AI-powered chat interfaces. Adopting GEO early ensures you capture market share in these new discovery channels before your competitors do."
   },
   {
-    title: "Social Media Marketing",
-    description:
-      "Engaging social campaigns that build brand authority and community across platforms.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop",
-    href: "/services/social-media",
+    question: "Can GEO and SEO work together?",
+    answer: "Absolutely. In fact, a strong SEO foundation is often a prerequisite for effective GEO. We build strategies that target both traditional search ranking and AI visibility simultaneously."
   },
   {
-    title: "Website Development",
-    description:
-      "Lightning-fast, scalable web applications built with modern frameworks and best practices.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
-    href: "/services/website-development",
-  },
+    question: "How do you measure success in GEO?",
+    answer: "We track brand mentions in AI outputs, sentiment and accuracy of those mentions, referral traffic from AI platforms, and overall visibility within generative engine responses."
+  }
 ];
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+export function GEOFAQ() {
+  // Construct JSON-LD schema
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-export function ServicesSection() {
   return (
-    <Section
-      id="services"
-      className="bg-background relative py-20 lg:py-32 overflow-hidden"
-    >
-      <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Comprehensive Digital <br />
-            <span className="text-primary">Solutions</span>
+    <Section variant="compact" className="bg-background">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            GEO <span className="text-primary">FAQ</span>
           </h2>
-
-          <p className="text-muted-foreground text-lg">
-            We provide end-to-end digital services to elevate your brand.
-            Discover how we can help you grow sustainably.
+          <p className="text-lg text-muted-foreground opacity-80">
+            Answers to common questions about Generative Engine Optimization.
           </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border rounded-2xl px-6 bg-card">
+                <AccordionTrigger className="text-lg font-bold hover:no-underline py-6 text-left">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </motion.div>
       </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto relative z-10"
-      >
-        {services.map((service, index) => (
-          <motion.div key={index} variants={itemVariants} className="h-full">
-            <Link
-              href={service.href}
-              className="group flex flex-col h-full rounded-2xl border border-border/50 bg-card overflow-hidden hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="relative h-56 w-full overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-              </div>
-
-              <div className="p-6 md:p-8 flex flex-col flex-grow relative bg-card">
-                <div className="absolute top-0 right-6 -translate-y-1/2 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 shadow-lg transition-all duration-300">
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-muted-foreground leading-relaxed flex-grow">
-                  {service.description}
-                </p>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-
-        <motion.div variants={itemVariants} className="h-full">
-          <Link
-            href="/services"
-            className="group flex flex-col h-full rounded-2xl border-2 border-dashed border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all duration-300 overflow-hidden items-center justify-center p-8 text-center min-h-[400px]"
-          >
-            <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-              <ArrowRight className="w-8 h-8 text-primary group-hover:translate-x-1 transition-transform" />
-            </div>
-
-            <h3 className="text-2xl font-bold mb-3 text-foreground">
-              View All Services
-            </h3>
-
-            <p className="text-muted-foreground">
-              Explore our full suite of digital marketing and development
-              solutions.
-            </p>
-          </Link>
-        </motion.div>
-      </motion.div>
+      {/* Structured Data */}
+      <Script id="geo-faq-schema" type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </Script>
     </Section>
   );
 }
