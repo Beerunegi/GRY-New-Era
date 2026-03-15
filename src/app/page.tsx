@@ -3,6 +3,7 @@ import { ClientsMarquee } from "@/components/sections/clients-marquee";
 import { ServicesSection } from "@/components/sections/services-section";
 import { CourseSection } from "@/components/sections/course-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
+import { PartnersSection } from "@/components/sections/partners-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicesSection />
       <CourseSection />
       <WhyUsSection />
+      <PartnersSection />
       <ProcessSection />
       <PortfolioSection />
       <TestimonialsSection />
