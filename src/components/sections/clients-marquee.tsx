@@ -56,12 +56,12 @@ const VelocityLogo = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const clients = [
-  <GlobalLogo key="global" className="h-10 w-auto" />,
-  <AcmeLogo key="acme" className="h-10 w-auto" />,
-  <NexusLogo key="nexus" className="h-10 w-auto" />,
-  <QuantumLogo key="quantum" className="h-10 w-auto" />,
-  <SynapseLogo key="synapse" className="h-10 w-auto" />,
-  <VelocityLogo key="velocity" className="h-10 w-auto" />
+  <GlobalLogo key="global" className="h-10 w-auto text-blue-600 dark:text-blue-400" />,
+  <AcmeLogo key="acme" className="h-10 w-auto text-red-600 dark:text-red-400" />,
+  <NexusLogo key="nexus" className="h-10 w-auto text-purple-600 dark:text-purple-400" />,
+  <QuantumLogo key="quantum" className="h-10 w-auto text-teal-600 dark:text-teal-400" />,
+  <SynapseLogo key="synapse" className="h-10 w-auto text-orange-500 dark:text-orange-400" />,
+  <VelocityLogo key="velocity" className="h-10 w-auto text-emerald-600 dark:text-emerald-400" />
 ];
 
 export function ClientsMarquee() {
@@ -91,7 +91,7 @@ export function ClientsMarquee() {
           {[...clients, ...clients, ...clients, ...clients].map((logo, i) => (
             <div
               key={i}
-              className="text-muted-foreground/40 hover:text-foreground/80 transition-colors duration-300"
+              className="transition-transform hover:scale-110 duration-300 opacity-90 hover:opacity-100"
             >
               {logo}
             </div>
