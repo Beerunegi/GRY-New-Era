@@ -2,21 +2,40 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Rocket } from "lucide-react";
+import { Menu, X, Rocket, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
+  { 
+    name: "Services", 
+    href: "/services",
+    submenu: [
+      { name: "SEO Optimization", href: "/services/seo" },
+      { name: "Paid Advertising (PPC)", href: "/services/ppc" },
+      { name: "Social Media Marketing", href: "/services/social-media" },
+      { name: "Content Marketing", href: "/services/content-marketing" },
+      { name: "Email Marketing", href: "/services/email-marketing" },
+      { name: "Website Development", href: "/services/website-development" },
+      { name: "Conversion Rate Optimization", href: "/services/conversion-rate-optimization" },
+      { name: "Analytics & Tracking", href: "/services/analytics-tracking" },
+      { name: "Branding & Creative", href: "/services/branding-creative" },
+      { name: "Online Reputation Management", href: "/services/online-reputation-management" },
+      { name: "AI Optimization (AIO)", href: "/services/aio" },
+      { name: "Generative Engine Optimization (GEO)", href: "/services/geo" }
+    ]
+  },
   { name: "Courses", href: "/courses" },
   { name: "Why Us", href: "/#why-us" },
   { name: "Portfolio", href: "/#portfolio" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,19 +66,38 @@ export function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {link.name}
-            </Link>
+            <div key={link.name} className="relative group">
+              <Link
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 flex items-center gap-1"
+              >
+                {link.name}
+                {link.submenu && <ChevronDown className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform" />}
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {link.submenu && (
+                <div className="absolute top-full -left-4 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="w-[500px] bg-card border border-border shadow-xl rounded-2xl p-4 grid grid-cols-2 gap-1 relative z-50">
+                    <div className="absolute -top-1.5 left-8 w-3 h-3 bg-card border-t border-l border-border rotate-45" />
+                    {link.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2.5 rounded-lg transition-colors font-medium truncate"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-
           <Button>Get Consultation</Button>
         </div>
 
@@ -74,19 +112,52 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg py-4 px-4 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg py-4 px-4 flex flex-col gap-2 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-base font-medium text-foreground py-2 border-b border-border/50"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
+            <div key={link.name} className="flex flex-col">
+              {link.submenu ? (
+                <>
+                  <button 
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="flex flex-row items-center justify-between text-base font-medium text-foreground py-3 border-b border-border/50 text-left"
+                  >
+                    {link.name}
+                    <ChevronDown className={cn("w-4 h-4 transition-transform", mobileServicesOpen && "rotate-180")} />
+                  </button>
+                  {mobileServicesOpen && (
+                    <div className="flex flex-col pl-4 py-2 bg-muted/20 border-b border-border/50">
+                      <Link 
+                        href="/services" 
+                        className="py-2.5 text-sm font-bold text-primary"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        View All Services →
+                      </Link>
+                      {link.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="py-2.5 text-sm text-muted-foreground hover:text-primary"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="text-base font-medium text-foreground py-3 border-b border-border/50"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )}
+            </div>
           ))}
-          <div className="flex flex-col gap-3 mt-4">
-
+          <div className="flex flex-col gap-3 mt-4 mb-4">
             <Button className="w-full">Get Consultation</Button>
           </div>
         </div>

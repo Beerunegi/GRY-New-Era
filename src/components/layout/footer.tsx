@@ -39,11 +39,17 @@ export function Footer() {
             <h4 className="font-semibold mb-6">Services</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li><Link href="/services/seo" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
+              <li><Link href="/services/content-marketing" className="hover:text-primary transition-colors">Content Marketing</Link></li>
               <li><Link href="/services/ppc" className="hover:text-primary transition-colors">Google Ads / PPC</Link></li>
               <li><Link href="/services/social-media" className="hover:text-primary transition-colors">Social Media Marketing</Link></li>
               <li><Link href="/services/ai-optimization" className="hover:text-primary transition-colors">AI Optimization (AIO)</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Website Design</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Brand Identity</Link></li>
+              <li><Link href="/services/generative-engine-optimization" className="hover:text-primary transition-colors">GEO Optimization</Link></li>
+              <li><Link href="/services/website-development" className="hover:text-primary transition-colors">Website Development</Link></li>
+              <li><Link href="/services/conversion-rate-optimization" className="hover:text-primary transition-colors">Conversion Rate Optimization (CRO)</Link></li>
+              <li><Link href="/services/email-marketing" className="hover:text-primary transition-colors">Email Marketing</Link></li>
+              <li><Link href="/services/online-reputation-management" className="hover:text-primary transition-colors">Online Reputation Management</Link></li>
+              <li><Link href="/services/analytics-tracking" className="hover:text-primary transition-colors">Analytics & Tracking</Link></li>
+              <li><Link href="/services/branding-creative" className="hover:text-primary transition-colors">Branding & Creative</Link></li>
             </ul>
           </div>
 

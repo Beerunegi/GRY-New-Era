@@ -10,7 +10,12 @@ import {
   PenTool, 
   Code2, 
   Sparkles,
-  Bot
+  Bot,
+  Target,
+  Mail,
+  ShieldCheck,
+  BarChart3,
+  Palette
 } from "lucide-react";
 
 const services = [
@@ -21,6 +26,38 @@ const services = [
     color: "text-primary",
     bg: "bg-primary/10",
     href: "/services/ai-optimization"
+  },
+  {
+    title: "Conversion Rate Optimization", // Added new service
+    description: "Turn visitors into loyal customers with data-driven strategies and A/B testing.",
+    icon: Target,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/conversion-rate-optimization"
+  },
+  {
+    title: "Online Reputation Management",
+    description: "Protect your brand image, suppress negative content, and build unshakeable trust.",
+    icon: ShieldCheck,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/online-reputation-management"
+  },
+  {
+    title: "Analytics & Tracking",
+    description: "Measure performance, track conversions, and make data-driven decisions with GA4 & GTM.",
+    icon: BarChart3,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/analytics-tracking"
+  },
+  {
+    title: "Branding & Creative",
+    description: "Visual identity, logo design, and marketing creatives that communicate authority and build trust.",
+    icon: Palette,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/branding-creative"
   },
   {
     title: "SEO Optimization",
@@ -52,6 +89,7 @@ const services = [
     icon: PenTool,
     color: "text-primary",
     bg: "bg-primary/10",
+    href: "/services/content-marketing"
   },
   {
     title: "Website Development",
@@ -66,6 +104,15 @@ const services = [
     icon: Sparkles,
     color: "text-primary",
     bg: "bg-primary/10",
+    href: "/services/website-development"
+  },
+  {
+    title: "Generative Engine Optimization (GEO)",
+    description: "Scale your visibility in AI-powered search results like ChatGPT and Google AI Overviews.",
+    icon: Sparkles,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    href: "/services/generative-engine-optimization"
   },
 ];
 
