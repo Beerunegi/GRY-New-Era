@@ -1,23 +1,6 @@
-@import "tailwindcss";
-
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: #ffffff;
-  
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: #ffffff;
-
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #000000;
@@ -67,12 +50,14 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-@utility text-balance {
-  text-wrap: balance;
-}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 
-@utility glass {
-  background-color: rgba(var(--background), 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  .glass {
+    background-color: rgba(var(--background), 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
