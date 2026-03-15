@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function WhatsAppButton() {
   return (
     <Link
-      href="https://wa.me/971501234567" // Placeholder number, user should update
+      href="https://wa.me/919871264699" // Updated with user provided number
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
