@@ -12,28 +12,32 @@ import Script from "next/script";
 
 const faqs = [
   {
-    question: "How long does it take to see SEO results?",
-    answer: "Generally, SEO is a long-term strategy. Most businesses start seeing significant improvements in rankings and traffic within 3 to 6 months of consistent optimization."
+    question: "What digital marketing services do you offer?",
+    answer: "We offer a comprehensive suite of digital marketing services including SEO, PPC Advertising, Social Media Management, Content Marketing, Web Development, and Conversion Rate Optimization."
   },
   {
-    question: "Do you guarantee #1 rankings on Google?",
-    answer: "Ethical SEO agencies do not guarantee specific rankings, as search algorithms are constantly evolving. However, we do guarantee a data-driven approach that significantly improves your visibility and competitive position."
+    question: "How do you measure the success of a digital marketing campaign?",
+    answer: "We track key performance indicators such as website traffic, conversion rates, cost per acquisition (CPA), return on ad spend (ROAS), and overall ROI using advanced analytics tools and custom dashboards."
   },
   {
-    question: "What is the difference between On-Page and Off-Page SEO?",
-    answer: "On-Page SEO involves optimizing elements within your website like content and structure. Off-Page SEO focuses on building authority through backlinks and external signals."
+    question: "How long does it take to see results from digital marketing?",
+    answer: "Timelines vary by service. SEO typically takes 3-6 months to show significant impact, while paid campaigns like PPC or Social Ads can generate targeted leads almost immediately."
   },
   {
-    question: "Is Local SEO important for my business?",
-    answer: "If you have a physical location or serve a specific geographic area, Local SEO is critical. It helps you appear in 'near me' searches and Google Maps, driving high-intent local traffic."
+    question: "Do you work with small businesses or only large enterprises?",
+    answer: "We partner with businesses of all sizes. We tailor our strategies and budgets to fit your specific goals, whether you are a local startup or an expanding global brand."
   },
   {
-    question: "How do you track the success of an SEO campaign?",
-    answer: "We use advanced tools like Google Analytics 4, Search Console, and SEMrush to track KPIs such as organic traffic growth, keyword rankings, conversion rates, and ROI."
+    question: "Why should I choose your agency over others?",
+    answer: "We combine data-driven strategies with creative excellence, offering transparent reporting, dedicated account managers, and a proven track record of driving measurable growth for our clients."
+  },
+  {
+    question: "Can you help improve my website's conversion rate?",
+    answer: "Absolutely. Our Conversion Rate Optimization (CRO) experts analyze user behavior, run A/B tests, and optimize your site's design and copy to turn more visitors into successful conversions."
   }
 ];
 
-export function SEOFAQ() {
+export function HomeFAQ() {
   // Construct JSON-LD schema
   const jsonLd = {
     "@context": "https://schema.org",
@@ -53,10 +57,10 @@ export function SEOFAQ() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-            SEO <span className="text-primary">FAQ</span>
+            Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-lg text-muted-foreground opacity-80">
-            Common questions about our SEO services and growth results.
+            Common questions about our digital marketing services and process.
           </p>
         </div>
 

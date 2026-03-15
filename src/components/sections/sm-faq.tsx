@@ -55,7 +55,7 @@ export function SMFAQ() {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Social <span className="text-primary">FAQ</span>
           </h2>
-          <p className="text-base text-muted-foreground opacity-80">
+          <p className="text-lg text-muted-foreground opacity-80">
             Answers to common questions about our social media management and brand growth strategies.
           </p>
         </div>
@@ -72,7 +72,7 @@ export function SMFAQ() {
                 <AccordionTrigger className="text-lg font-bold hover:no-underline py-6 text-left">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm pb-6 leading-relaxed">
+                <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -33,7 +33,7 @@ export function WebDevOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Performance First</h4>
-                   <p className="text-xs text-muted-foreground">Optimized for Core Web Vitals and speed.</p>
+                   <p className="text-sm text-muted-foreground">Optimized for Core Web Vitals and speed.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function WebDevOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Mobile Optimized</h4>
-                   <p className="text-xs text-muted-foreground">Flawless responsive design for every screen.</p>
+                   <p className="text-sm text-muted-foreground">Flawless responsive design for every screen.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function WebDevOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Strategic Planning</h4>
-                      <p className="text-sm text-muted-foreground">We align every line of code with your business objectives and user needs.</p>
+                      <p className="text-base text-muted-foreground">We align every line of code with your business objectives and user needs.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Scalable Architecture</h4>
-                      <p className="text-sm text-muted-foreground">Our solutions are built to grow alongside your business without technical debt.</p>
+                      <p className="text-base text-muted-foreground">Our solutions are built to grow alongside your business without technical debt.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">User-Centric Design</h4>
-                      <p className="text-sm text-muted-foreground">Interfaces designed for engagement, retention, and maximum conversion rates.</p>
+                      <p className="text-base text-muted-foreground">Interfaces designed for engagement, retention, and maximum conversion rates.</p>
                    </div>
                 </li>
              </ul>

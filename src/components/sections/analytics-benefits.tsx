@@ -60,7 +60,7 @@ export function AnalyticsBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -85,7 +85,7 @@ export function AnalyticsBenefits() {
                 <div className="p-4 bg-primary/5 border border-primary/20 rounded-xl relative overflow-hidden">
                    <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
                    <div className="flex justify-between items-center px-2">
-                       <span className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Attribution Accuracy</span>
+                       <span className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Attribution Accuracy</span>
                        <span className="text-primary font-black">99.9%</span>
                    </div>
                 </div>

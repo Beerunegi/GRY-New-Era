@@ -38,7 +38,7 @@ export function PortfolioCaseStudies() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Featured <span className="text-primary">Case Studies</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           Deep dives into complex challenges and the strategic solutions that drove measurable business growth.
         </p>
       </div>
@@ -56,23 +56,23 @@ export function PortfolioCaseStudies() {
             {/* Left Content */}
             <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-6">
-                <div className="text-sm font-bold text-primary uppercase tracking-wider">{study.client}</div>
+                <div className="text-base font-bold text-primary uppercase tracking-wider">{study.client}</div>
                 <div className="w-1.5 h-1.5 rounded-full bg-border" />
-                <div className="text-sm text-muted-foreground">{study.industry}</div>
+                <div className="text-base text-muted-foreground">{study.industry}</div>
               </div>
               
               <div className="space-y-6 mb-10">
                 <div>
-                  <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-2">The Challenge</h4>
+                  <h4 className="text-base font-bold text-muted-foreground uppercase tracking-widest mb-2">The Challenge</h4>
                   <p className="text-lg font-medium leading-relaxed">{study.challenge}</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-2">The Solution</h4>
+                  <h4 className="text-base font-bold text-muted-foreground uppercase tracking-widest mb-2">The Solution</h4>
                   <p className="text-lg text-muted-foreground leading-relaxed">{study.solution}</p>
                 </div>
               </div>
 
-              <button className="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:gap-3 transition-all self-start">
+              <button className="inline-flex items-center gap-2 text-base font-bold text-primary group-hover:gap-3 transition-all self-start">
                 Read Full Study <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -90,7 +90,7 @@ export function PortfolioCaseStudies() {
                     </div>
                     <div>
                       <div className="text-3xl font-black tracking-tight">{metric.value}</div>
-                      <div className="text-sm font-medium text-white/80">{metric.label}</div>
+                      <div className="text-base font-medium text-white/80">{metric.label}</div>
                     </div>
                   </div>
                 ))}

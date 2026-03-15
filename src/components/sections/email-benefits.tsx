@@ -60,7 +60,7 @@ export function EmailBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -79,11 +79,11 @@ export function EmailBenefits() {
                 <div className="mb-8 text-center text-primary">
                    <MailOpen className="w-16 h-16 mx-auto mb-6" />
                    <div className="text-6xl font-black mb-2">$42</div>
-                   <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Average Return per $1 Spent</p>
+                   <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Average Return per $1 Spent</p>
                 </div>
                 
                 <div className="space-y-4 text-center mt-6">
-                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-500 font-bold text-sm">
+                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-500 font-bold text-base">
                       <Zap className="w-4 h-4" /> The Most Profitable Channel
                    </div>
                 </div>

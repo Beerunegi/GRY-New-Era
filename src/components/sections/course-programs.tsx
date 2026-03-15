@@ -83,30 +83,30 @@ export function CoursePrograms() {
             className={`relative p-8 rounded-3xl border ${program.color} bg-card flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-500 ${program.highlight ? "ring-2 ring-primary ring-offset-4 ring-offset-background md:-translate-y-4" : ""}`}
           >
             {program.highlight && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">
                 Most Popular
               </div>
             )}
 
             <div className="mb-8">
               <div className="flex justify-between items-start mb-4">
-                <div className={`p-3 rounded-2xl ${program.bg} text-foreground font-bold text-sm flex items-center gap-2`}>
+                <div className={`p-3 rounded-2xl ${program.bg} text-foreground font-bold text-base flex items-center gap-2`}>
                   <Calendar className="w-4 h-4 text-primary" /> {program.duration}
                 </div>
                 <div className="flex items-center gap-1 text-yellow-500">
                   <Star className="w-4 h-4 fill-current" />
-                  <span className="text-xs font-bold text-foreground">4.9/5</span>
+                  <span className="text-sm font-bold text-foreground">4.9/5</span>
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-2">{program.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {program.description}
               </p>
             </div>
 
             <div className="mb-8 flex-1">
-              <div className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-6">What's Included:</div>
-              <ul className="space-y-4 text-sm">
+              <div className="text-base font-bold uppercase tracking-widest text-muted-foreground mb-6">What's Included:</div>
+              <ul className="space-y-4 text-base">
                 {program.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -121,9 +121,9 @@ export function CoursePrograms() {
             <div className="mt-auto pt-8 border-t border-border/50">
               <div className="flex items-baseline gap-2 mb-6">
                 <span className="text-4xl font-black">{program.price}</span>
-                <span className="text-sm text-muted-foreground">/ one-time</span>
+                <span className="text-base text-muted-foreground">/ one-time</span>
               </div>
-              <Button className={`w-full h-12 rounded-xl text-sm font-bold ${program.highlight ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "bg-muted text-foreground hover:bg-primary hover:text-primary-foreground"}`}>
+              <Button className={`w-full h-12 rounded-xl text-base font-bold ${program.highlight ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "bg-muted text-foreground hover:bg-primary hover:text-primary-foreground"}`}>
                 Download Brochure
               </Button>
             </div>

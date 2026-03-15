@@ -60,7 +60,7 @@ export function PartnersSection() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="max-w-md">
             <h3 className="text-2xl font-bold tracking-tight mb-2">Our Certified Tech Stack</h3>
-            <p className="text-muted-foreground text-sm">We're proud partners with industry leaders to bring you the best-in-class solutions.</p>
+            <p className="text-muted-foreground text-base">We're proud partners with industry leaders to bring you the best-in-class solutions.</p>
           </div>
         </div>
       </div>

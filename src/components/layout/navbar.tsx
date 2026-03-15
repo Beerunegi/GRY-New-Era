@@ -75,7 +75,7 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors py-2 flex items-center gap-1",
+                  "text-base font-medium transition-colors py-2 flex items-center gap-1",
                   isScrolled 
                     ? "text-muted-foreground hover:text-primary" 
                     : "text-white/80 hover:text-white"
@@ -94,7 +94,7 @@ export function Navbar() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2.5 rounded-lg transition-colors font-medium truncate"
+                        className="text-base text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2.5 rounded-lg transition-colors font-medium truncate"
                       >
                         {subItem.name}
                       </Link>
@@ -137,7 +137,7 @@ export function Navbar() {
                 <>
                   <button 
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="flex flex-row items-center justify-between text-base font-medium text-foreground py-3 border-b border-border/50 text-left"
+                    className="flex flex-row items-center justify-between text-lg font-medium text-foreground py-3 border-b border-border/50 text-left"
                   >
                     {link.name}
                     <ChevronDown className={cn("w-4 h-4 transition-transform", mobileServicesOpen && "rotate-180")} />
@@ -146,7 +146,7 @@ export function Navbar() {
                     <div className="flex flex-col pl-4 py-2 bg-muted/20 border-b border-border/50">
                       <Link 
                         href="/services" 
-                        className="py-2.5 text-sm font-bold text-primary"
+                        className="py-2.5 text-base font-bold text-primary"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         View All Services →
@@ -155,7 +155,7 @@ export function Navbar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="py-2.5 text-sm text-muted-foreground hover:text-primary"
+                          className="py-2.5 text-base text-muted-foreground hover:text-primary"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {subItem.name}
@@ -167,7 +167,7 @@ export function Navbar() {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-base font-medium text-foreground py-3 border-b border-border/50"
+                  className="text-lg font-medium text-foreground py-3 border-b border-border/50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

@@ -82,7 +82,7 @@ export function CourseFeatures() {
               <feature.icon className={`w-8 h-8 ${feature.color}`} />
             </div>
             <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed">
               {feature.description}
             </p>
           </motion.div>

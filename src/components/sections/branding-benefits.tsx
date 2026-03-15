@@ -60,7 +60,7 @@ export function BrandingBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -80,7 +80,7 @@ export function BrandingBenefits() {
                 <h3 className="text-4xl font-black mb-4 tracking-tight">The 10x Multiplier</h3>
                 <p className="text-muted-foreground mb-8">Design-driven companies outperform the S&P 500 index by <strong className="text-foreground text-xl">219%</strong> over a 10-year period.</p>
                 
-                <div className="w-full bg-muted/50 p-4 rounded-xl border border-border text-sm font-bold uppercase tracking-widest text-primary">
+                <div className="w-full bg-muted/50 p-4 rounded-xl border border-border text-base font-bold uppercase tracking-widest text-primary">
                   Invest in Identity
                 </div>
              </div>

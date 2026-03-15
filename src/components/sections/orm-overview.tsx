@@ -33,7 +33,7 @@ export function ORMOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Defense</h4>
-                   <p className="text-xs text-muted-foreground">Burying harmful content effectively.</p>
+                   <p className="text-sm text-muted-foreground">Burying harmful content effectively.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function ORMOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Offense</h4>
-                   <p className="text-xs text-muted-foreground">Highlighting positive customer stories.</p>
+                   <p className="text-sm text-muted-foreground">Highlighting positive customer stories.</p>
                 </div>
              </div>
           </div>
@@ -66,7 +66,7 @@ export function ORMOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Proactive Protection</h4>
-                      <p className="text-sm text-muted-foreground">We secure key digital assets so competitors and detractors can't define your brand narrative.</p>
+                      <p className="text-base text-muted-foreground">We secure key digital assets so competitors and detractors can't define your brand narrative.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
@@ -75,7 +75,7 @@ export function ORMOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Strategic Suppression</h4>
-                      <p className="text-sm text-muted-foreground">Using advanced reverse-SEO techniques, we push negative and outdated search results off page one.</p>
+                      <p className="text-base text-muted-foreground">Using advanced reverse-SEO techniques, we push negative and outdated search results off page one.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
@@ -84,7 +84,7 @@ export function ORMOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Trust Cultivation</h4>
-                      <p className="text-sm text-muted-foreground">We help you organically generate and showcase positive reviews that convert researchers into buyers.</p>
+                      <p className="text-base text-muted-foreground">We help you organically generate and showcase positive reviews that convert researchers into buyers.</p>
                    </div>
                 </li>
              </ul>

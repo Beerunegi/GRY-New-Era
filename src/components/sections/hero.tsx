@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-base font-medium mb-8"
           >
             <span className="flex h-2 w-2 rounded-full bg-primary relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -70,10 +70,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-4"
           >
-            <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base shadow-lg cursor-pointer">
+            <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg shadow-lg cursor-pointer">
               Get Free Consultation <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-base bg-white/10 text-white hover:bg-white/20 hover:text-white border-white/20 backdrop-blur-md cursor-pointer">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg bg-white/10 text-white hover:bg-white/20 hover:text-white border-white/20 backdrop-blur-md cursor-pointer">
               <Play className="w-5 h-5 mr-2" /> View Our Work
             </Button>
           </motion.div>

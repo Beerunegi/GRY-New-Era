@@ -18,7 +18,7 @@ export function PPCHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-xs mb-6 uppercase tracking-wider backdrop-blur-sm border border-secondary/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm border border-secondary/20">
               <MousePointerClick className="w-3.5 h-3.5" /> High-ROI Advertising
             </div>
             
@@ -32,7 +32,7 @@ export function PPCHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button size="lg" className="h-14 px-10 text-base shadow-xl shadow-secondary/20 font-bold group bg-secondary hover:bg-secondary/90 border-0">
+              <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-secondary/20 font-bold group bg-secondary hover:bg-secondary/90 border-0">
                 Get Free PPC Audit <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
@@ -42,13 +42,13 @@ export function PPCHero() {
                 <div className="p-2 rounded-xl bg-secondary/5 border border-secondary/10">
                   <Target className="w-5 h-5 text-secondary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Laser Target</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Laser Target</div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-primary/5 border border-primary/10">
                   <Zap className="w-5 h-5 text-primary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Instant Results</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Instant Results</div>
               </div>
             </div>
           </motion.div>

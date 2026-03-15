@@ -57,7 +57,7 @@ export function ContentServicesGrid() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Scalable <span className="text-primary">Content Services</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           We provide end-to-end content solutions designed to capture attention and build lasting brand authority.
         </p>
       </div>
@@ -75,13 +75,13 @@ export function ContentServicesGrid() {
             <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
               <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
             </div>
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-            <p className="text-muted-foreground text-xs leading-relaxed mb-6 opacity-90">
+            <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+            <p className="text-muted-foreground text-base leading-relaxed mb-6 opacity-90">
               {service.description}
             </p>
             <ul className="grid grid-cols-2 gap-2">
               {service.details.map((detail, idx) => (
-                <li key={idx} className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-primary/70">
+                <li key={idx} className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary/70">
                   <div className="w-1 h-1 rounded-full bg-primary/40" />
                   {detail}
                 </li>

@@ -71,7 +71,7 @@ const AccordionContent = ({ className, children, isOpen }: any) => {
         className
       )}
     >
-      <div className="text-sm">{children}</div>
+      <div className="text-base">{children}</div>
     </div>
   );
 };

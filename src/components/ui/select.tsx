@@ -34,7 +34,7 @@ export const SelectTrigger = ({ className, children, value, open, setOpen }: any
     type="button"
     onClick={() => setOpen(!open)}
     className={cn(
-      "flex h-14 w-full items-center justify-between rounded-full border border-border bg-background px-6 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+      "flex h-14 w-full items-center justify-between rounded-full border border-border bg-background px-6 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
       className
     )}
   >
@@ -78,7 +78,7 @@ export const SelectContent = ({ children, open, setOpen, setValue, onValueChange
 
 export const SelectItem = ({ children, value: itemValue, setValue, setOpen, onValueChange }: any) => (
   <div
-    className="relative flex w-full cursor-pointer select-none items-center rounded-xl py-3 px-4 text-sm outline-none hover:bg-muted focus:bg-muted font-medium transition-colors"
+    className="relative flex w-full cursor-pointer select-none items-center rounded-xl py-3 px-4 text-base outline-none hover:bg-muted focus:bg-muted font-medium transition-colors"
     onClick={() => {
       setValue(children);
       if (onValueChange) onValueChange(itemValue);

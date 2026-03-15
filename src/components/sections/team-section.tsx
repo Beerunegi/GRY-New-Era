@@ -76,8 +76,8 @@ export function TeamSection() {
             </div>
             
             <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-            <p className="text-primary font-medium text-sm mb-3 uppercase tracking-wider">{member.role}</p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-primary font-medium text-base mb-3 uppercase tracking-wider">{member.role}</p>
+            <p className="text-muted-foreground text-base leading-relaxed">
               {member.bio}
             </p>
           </motion.div>

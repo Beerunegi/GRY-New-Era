@@ -33,7 +33,7 @@ export function EmailOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Automation</h4>
-                   <p className="text-xs text-muted-foreground">Set-and-forget sequences that sell 24/7.</p>
+                   <p className="text-sm text-muted-foreground">Set-and-forget sequences that sell 24/7.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function EmailOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Retention</h4>
-                   <p className="text-xs text-muted-foreground">Keep your brand top-of-mind consistently.</p>
+                   <p className="text-sm text-muted-foreground">Keep your brand top-of-mind consistently.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function EmailOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Hyper-Personalization</h4>
-                      <p className="text-sm text-muted-foreground">Segment your audience to deliver highly relevant content that speaks to their specific needs.</p>
+                      <p className="text-base text-muted-foreground">Segment your audience to deliver highly relevant content that speaks to their specific needs.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Measurable Impact</h4>
-                      <p className="text-sm text-muted-foreground">Track exact open rates, click-throughs, and revenue generated from every single campaign.</p>
+                      <p className="text-base text-muted-foreground">Track exact open rates, click-throughs, and revenue generated from every single campaign.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Scalable Engagement</h4>
-                      <p className="text-sm text-muted-foreground">Reach ten or ten thousand people instantly with the exact same level of effort and cost.</p>
+                      <p className="text-base text-muted-foreground">Reach ten or ten thousand people instantly with the exact same level of effort and cost.</p>
                    </div>
                 </li>
              </ul>

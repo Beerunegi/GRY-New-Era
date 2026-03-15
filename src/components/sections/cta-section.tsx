@@ -21,7 +21,7 @@ export function CTASection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 text-base font-medium mb-8">
             <Sparkles className="w-4 h-4 text-primary" /> Let's build something extraordinary
           </div>
           
@@ -42,7 +42,7 @@ export function CTASection() {
             </Button>
           </div>
           
-          <p className="mt-8 text-sm text-white/50">
+          <p className="mt-8 text-base text-white/50">
             No commitment required. 100% free consultation.
           </p>
         </motion.div>

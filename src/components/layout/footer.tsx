@@ -15,7 +15,7 @@ export function Footer() {
               </div>
               <span className="font-bold text-xl tracking-tight">NEW DIGITAL ERA</span>
             </Link>
-            <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+            <p className="text-muted-foreground mb-6 text-base leading-relaxed">
               We help ambitious businesses scale through data-driven digital marketing and premium web experiences.
             </p>
             <div className="flex gap-4">
@@ -37,7 +37,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-6">Services</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-base text-muted-foreground">
               <li><Link href="/services/seo" className="hover:text-primary transition-colors">SEO Optimization</Link></li>
               <li><Link href="/services/content-marketing" className="hover:text-primary transition-colors">Content Marketing</Link></li>
               <li><Link href="/services/ppc" className="hover:text-primary transition-colors">Google Ads / PPC</Link></li>
@@ -55,7 +55,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold mb-6">Company</h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-base text-muted-foreground">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/courses" className="hover:text-primary transition-colors">Our Academy</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
@@ -67,21 +67,21 @@ export function Footer() {
           {/* Newsletter */}
           <div>
             <h4 className="font-semibold mb-6">Stay Updated</h4>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-base text-muted-foreground mb-4">
               Subscribe to our newsletter for the latest digital marketing trends.
             </p>
             <form className="flex flex-col gap-3">
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="w-full h-11 px-4 rounded-md border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-11 px-4 rounded-md border bg-background text-base focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <Button type="submit" className="w-full">Subscribe</Button>
             </form>
           </div>
         </div>
 
-        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-base text-muted-foreground">
           <p>© {new Date().getFullYear()} New Digital Era. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>

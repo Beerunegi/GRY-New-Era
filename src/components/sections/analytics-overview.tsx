@@ -33,7 +33,7 @@ export function AnalyticsOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Cross-Domain</h4>
-                   <p className="text-xs text-muted-foreground">Track users seamlessly across all your digital assets.</p>
+                   <p className="text-sm text-muted-foreground">Track users seamlessly across all your digital assets.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function AnalyticsOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Deep Visibility</h4>
-                   <p className="text-xs text-muted-foreground">Go beyond page views to track specific interactions.</p>
+                   <p className="text-sm text-muted-foreground">Go beyond page views to track specific interactions.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function AnalyticsOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">True ROI Attribution</h4>
-                      <p className="text-sm text-muted-foreground">Know exactly which ad click, email, or social post generated the final sale.</p>
+                      <p className="text-base text-muted-foreground">Know exactly which ad click, email, or social post generated the final sale.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Friction Discovery</h4>
-                      <p className="text-sm text-muted-foreground">Identify exactly where users are abandoning your checkout or form sequence.</p>
+                      <p className="text-base text-muted-foreground">Identify exactly where users are abandoning your checkout or form sequence.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Algorithmic Feeding</h4>
-                      <p className="text-sm text-muted-foreground">Send high-quality conversion data back to Google & Meta to train their bidding algorithms.</p>
+                      <p className="text-base text-muted-foreground">Send high-quality conversion data back to Google & Meta to train their bidding algorithms.</p>
                    </div>
                 </li>
              </ul>

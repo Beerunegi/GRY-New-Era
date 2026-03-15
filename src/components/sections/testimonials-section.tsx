@@ -63,7 +63,7 @@ export function TestimonialsSection() {
               </div>
               <div>
                 <div className="font-bold">{t.author}</div>
-                <div className="text-sm text-muted-foreground">{t.role}</div>
+                <div className="text-base text-muted-foreground">{t.role}</div>
               </div>
             </div>
           </motion.div>

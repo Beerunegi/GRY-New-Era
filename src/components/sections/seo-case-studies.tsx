@@ -36,7 +36,7 @@ export function SEOCaseStudies() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Data-Driven <span className="text-primary">Success</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           Explore how our SEO expertise transformed search performance for our partners.
         </p>
       </div>

@@ -18,7 +18,7 @@ export function BrandingHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
               <Palette className="w-3.5 h-3.5" /> Design that Commands Attention
             </div>
             
@@ -32,7 +32,7 @@ export function BrandingHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button size="lg" className="h-14 px-10 text-base shadow-xl shadow-primary/20 font-bold group">
+              <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-primary/20 font-bold group">
                 Build Your Brand <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
@@ -42,13 +42,13 @@ export function BrandingHero() {
                 <div className="p-2 rounded-xl bg-primary/5 border border-primary/10">
                   <Gem className="w-5 h-5 text-primary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Premium Quality</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Premium Quality</div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-secondary/5 border border-secondary/10">
                   <Sparkles className="w-5 h-5 text-secondary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Original Concepts</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Original Concepts</div>
               </div>
             </div>
           </motion.div>

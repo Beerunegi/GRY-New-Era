@@ -60,7 +60,7 @@ export function ORMBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -80,7 +80,7 @@ export function ORMBenefits() {
                 <h3 className="text-4xl font-black mb-4 tracking-tight">Don't Bleed Sales</h3>
                 <p className="text-muted-foreground mb-8">Businesses risk losing up to <strong className="text-foreground">22%</strong> of customers if just one negative article is found by users considering buying their product.</p>
                 
-                <div className="w-full bg-muted/50 p-4 rounded-xl border border-border text-sm font-bold uppercase tracking-widest">
+                <div className="w-full bg-muted/50 p-4 rounded-xl border border-border text-base font-bold uppercase tracking-widest">
                   Secure Your Brand Today
                 </div>
              </div>

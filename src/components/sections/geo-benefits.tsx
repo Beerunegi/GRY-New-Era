@@ -55,7 +55,7 @@ export function GEOBenefits() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-1">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -66,13 +66,13 @@ export function GEOBenefits() {
           <div className="p-1 rounded-[3rem] bg-gradient-to-br from-primary/20 via-border to-secondary/20 shadow-2xl">
              <div className="rounded-[2.9rem] overflow-hidden bg-background p-8 md:p-12">
                 <div className="text-center mb-10">
-                   <div className="text-sm font-bold uppercase tracking-widest text-primary mb-2">Impact Analysis</div>
+                   <div className="text-base font-bold uppercase tracking-widest text-primary mb-2">Impact Analysis</div>
                    <h3 className="text-3xl font-black">GEO VS TRADITIONAL SEO</h3>
                 </div>
                 
                 <div className="space-y-10">
                    <div className="space-y-4">
-                      <div className="flex justify-between text-sm font-bold uppercase tracking-widest">
+                      <div className="flex justify-between text-base font-bold uppercase tracking-widest">
                          <span>Visibility (GEO)</span>
                          <span className="text-primary">95%</span>
                       </div>
@@ -87,7 +87,7 @@ export function GEOBenefits() {
                    </div>
                    
                    <div className="space-y-4">
-                      <div className="flex justify-between text-sm font-bold uppercase tracking-widest">
+                      <div className="flex justify-between text-base font-bold uppercase tracking-widest">
                          <span>CTR (Traditional)</span>
                          <span className="text-red-500">Decreasing</span>
                       </div>
@@ -102,7 +102,7 @@ export function GEOBenefits() {
                    </div>
 
                    <div className="space-y-4">
-                      <div className="flex justify-between text-sm font-bold uppercase tracking-widest">
+                      <div className="flex justify-between text-base font-bold uppercase tracking-widest">
                          <span>User Trust (AI Citations)</span>
                          <span className="text-secondary">88%</span>
                       </div>
@@ -118,7 +118,7 @@ export function GEOBenefits() {
                 </div>
 
                 <div className="mt-12 text-center">
-                   <p className="text-xs text-muted-foreground font-medium italic">
+                   <p className="text-sm text-muted-foreground font-medium italic">
                       *Based on internal 2024 search trend data and model adoption rates.
                    </p>
                 </div>

@@ -63,7 +63,7 @@ export function ProcessSection() {
               </div>
               
               <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
-              <p className="text-primary-foreground/80 text-sm leading-relaxed px-2">
+              <p className="text-primary-foreground/80 text-base leading-relaxed px-2">
                 {step.description}
               </p>
             </motion.div>

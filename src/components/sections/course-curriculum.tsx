@@ -64,7 +64,7 @@ export function CourseCurriculum() {
            viewport={{ once: true }}
            className="lg:sticky lg:top-32"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-base mb-6 uppercase tracking-widest">
             What You Will Learn
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8">
@@ -80,13 +80,13 @@ export function CourseCurriculum() {
                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Layers className="w-6 h-6 text-primary" />
                </div>
-               <div className="text-sm font-bold">25+ Core Modules</div>
+               <div className="text-base font-bold">25+ Core Modules</div>
             </div>
             <div className="flex gap-4 items-center p-4 rounded-xl bg-card border border-border shadow-sm">
                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
                   <Presentation className="w-6 h-6 text-secondary" />
                </div>
-               <div className="text-sm font-bold">Practical Labs</div>
+               <div className="text-base font-bold">Practical Labs</div>
             </div>
           </div>
 
@@ -118,7 +118,7 @@ export function CourseCurriculum() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export function CourseCurriculum() {
 
               <div className="grid grid-cols-2 gap-3 pt-6 border-t border-border/50">
                 {item.modules.map((mod, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
+                  <div key={idx} className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                     {mod}
                   </div>

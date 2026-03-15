@@ -80,13 +80,13 @@ export function PortfolioSection() {
               {/* Dark overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               
-              <div className="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold tracking-wider text-foreground border border-white/10 z-10">
+              <div className="absolute top-4 right-4 bg-background/50 backdrop-blur-md px-3 py-1 rounded-full text-sm font-semibold tracking-wider text-foreground border border-white/10 z-10">
                 {study.category}
               </div>
             </div>
 
             <div className="p-8 flex-1 flex flex-col pt-6 relative z-10">
-              <div className="text-sm font-semibold text-primary mb-3">
+              <div className="text-base font-semibold text-primary mb-3">
                 {study.client}
               </div>
               <h3 className="text-xl font-bold mb-6 line-clamp-2">
@@ -97,7 +97,7 @@ export function PortfolioSection() {
                 {study.metrics.map((metric, idx) => (
                   <div key={idx}>
                     <div className="text-2xl font-black">{metric.value}</div>
-                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{metric.label}</div>
+                    <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{metric.label}</div>
                   </div>
                 ))}
               </div>

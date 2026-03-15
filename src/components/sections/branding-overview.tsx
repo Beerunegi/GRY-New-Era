@@ -33,7 +33,7 @@ export function BrandingOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Strategic</h4>
-                   <p className="text-xs text-muted-foreground">Every design choice is bound to a business goal.</p>
+                   <p className="text-sm text-muted-foreground">Every design choice is bound to a business goal.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function BrandingOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Emotional</h4>
-                   <p className="text-xs text-muted-foreground">Creating instant connections with your audience.</p>
+                   <p className="text-sm text-muted-foreground">Creating instant connections with your audience.</p>
                 </div>
              </div>
           </div>
@@ -66,7 +66,7 @@ export function BrandingOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Visual Recognition</h4>
-                      <p className="text-sm text-muted-foreground">Establishing a distinct look that makes your brand instantly identifiable in a crowded marketplace.</p>
+                      <p className="text-base text-muted-foreground">Establishing a distinct look that makes your brand instantly identifiable in a crowded marketplace.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
@@ -75,7 +75,7 @@ export function BrandingOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Consistency</h4>
-                      <p className="text-sm text-muted-foreground">Applying strict brand guidelines across all channels—from social media to print materials to web.</p>
+                      <p className="text-base text-muted-foreground">Applying strict brand guidelines across all channels—from social media to print materials to web.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
@@ -84,7 +84,7 @@ export function BrandingOverview() {
                    </div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Brand Equity</h4>
-                      <p className="text-sm text-muted-foreground">Building long-term value, loyalty, and trust that allows you to command premium pricing.</p>
+                      <p className="text-base text-muted-foreground">Building long-term value, loyalty, and trust that allows you to command premium pricing.</p>
                    </div>
                 </li>
              </ul>

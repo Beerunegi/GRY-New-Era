@@ -44,7 +44,7 @@ export function ContactHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
             Let's Talk Growth
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
@@ -69,7 +69,7 @@ export function ContactHero() {
               <method.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
             </div>
             <h3 className="font-bold text-xl mb-2">{method.title}</h3>
-            <p className="text-sm text-muted-foreground mb-4">{method.description}</p>
+            <p className="text-base text-muted-foreground mb-4">{method.description}</p>
             <p className="font-bold text-foreground mt-auto">{method.detail}</p>
           </motion.div>
         ))}

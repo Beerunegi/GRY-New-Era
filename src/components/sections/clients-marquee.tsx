@@ -68,7 +68,7 @@ export function ClientsMarquee() {
   return (
     <section className="py-12 border-y border-border/50 bg-muted/20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl mb-10 text-center">
-        <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
+        <p className="text-base font-medium text-muted-foreground uppercase tracking-widest">
           Trusted by innovative companies worldwide
         </p>
       </div>

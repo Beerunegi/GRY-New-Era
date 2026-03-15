@@ -54,7 +54,7 @@ export function WhyUsSection() {
             ].map((item, i) => (
               <div key={i} className="border-l-2 border-primary pl-4">
                 <div className="text-3xl md:text-4xl font-bold mb-2">{item.stat}</div>
-                <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{item.label}</div>
+                <div className="text-base text-muted-foreground font-medium uppercase tracking-wider">{item.label}</div>
               </div>
             ))}
           </div>
@@ -74,7 +74,7 @@ export function WhyUsSection() {
                 <reason.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 {reason.description}
               </p>
             </motion.div>

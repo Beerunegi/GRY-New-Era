@@ -36,7 +36,7 @@ export function CourseSection() {
                 <GraduationCap className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2">Master Digital Marketing</h3>
-              <p className="text-foreground/80 text-sm max-w-[280px]">
+              <p className="text-foreground/80 text-base max-w-[280px]">
                 Join 500+ professionals who accelerated their career with our agency-led course.
               </p>
             </div>
@@ -50,11 +50,11 @@ export function CourseSection() {
                 <div className="w-10 h-10 rounded-full bg-teal-100 border-2 border-background flex items-center justify-center overflow-hidden">
                    <Image src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" width={40} height={40} alt="Student" className="object-cover w-full h-full" />
                 </div>
-                <div className="w-10 h-10 rounded-full bg-purple-100 border-2 border-background flex items-center justify-center text-xs font-bold text-purple-700">5k+</div>
+                <div className="w-10 h-10 rounded-full bg-purple-100 border-2 border-background flex items-center justify-center text-sm font-bold text-purple-700">5k+</div>
               </div>
               <div>
-                <div className="font-bold text-sm">Active Students</div>
-                <div className="text-xs text-muted-foreground flex items-center text-yellow-500 gap-1">
+                <div className="font-bold text-base">Active Students</div>
+                <div className="text-sm text-muted-foreground flex items-center text-yellow-500 gap-1">
                   <span>★★★★★</span> <span className="text-foreground/50 text-[10px]">(4.9)</span>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export function CourseSection() {
           viewport={{ once: true }}
           className="order-1 lg:order-2"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-medium text-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-medium text-base mb-6">
             <GraduationCap className="w-4 h-4" /> New Digital Era Academy
           </div>
           
@@ -96,10 +96,10 @@ export function CourseSection() {
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="h-14 px-8 text-base">
+            <Button size="lg" className="h-14 px-8 text-lg">
               Enroll Now <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-base bg-background">
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-background">
               Download Syllabus
             </Button>
           </div>

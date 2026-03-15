@@ -29,7 +29,7 @@ export default function TheDentalPortCaseStudy() {
       <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
               Healthcare Web Development Case Study
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -44,22 +44,22 @@ export default function TheDentalPortCaseStudy() {
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <TrendingUp className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">150%</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Increase in Patient Leads</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Increase in Patient Leads</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <MonitorSmartphone className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">100%</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Mobile Responsive</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Mobile Responsive</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Gauge className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">&lt; 2s</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Page Load Speed</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Page Load Speed</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Search className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">Top 3</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Local Search Ranking</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Local Search Ranking</p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function TheDentalPortCaseStudy() {
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
                 Client Overview
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -92,7 +92,7 @@ export default function TheDentalPortCaseStudy() {
             </div>
             
             <div className="bg-muted/30 p-8 md:p-10 rounded-3xl border">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
                 The Challenge
               </div>
               <h3 className="text-2xl font-bold mb-4">A Disconnected Digital Presence</h3>
@@ -105,7 +105,7 @@ export default function TheDentalPortCaseStudy() {
                   "Slow loading times impacting both user experience and local search rankings."
                 ].map((challenge, index) => (
                   <li key={index} className="flex gap-3 text-muted-foreground items-start">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-sm font-medium mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-base font-medium mt-0.5">
                       {index + 1}
                     </span>
                     <span>{challenge}</span>
@@ -211,7 +211,7 @@ export default function TheDentalPortCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">150% Increase</div>
-                    <div className="text-sm text-muted-foreground">In monthly patient leads via organic search</div>
+                    <div className="text-base text-muted-foreground">In monthly patient leads via organic search</div>
                   </div>
                 </div>
                 
@@ -221,7 +221,7 @@ export default function TheDentalPortCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">Enhanced Trust</div>
-                    <div className="text-sm text-muted-foreground">Better presentation of clinic facilities & doctors</div>
+                    <div className="text-base text-muted-foreground">Better presentation of clinic facilities & doctors</div>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function TheDentalPortCaseStudy() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {["WordPress", "PHP/MySQL", "Tailwind CSS", "Yoast SEO", "Google Analytics", "Local Business Schema"].map((tool) => (
-                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-sm font-medium rounded-full border">
+                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-base font-medium rounded-full border">
                       {tool}
                     </span>
                   ))}
@@ -259,7 +259,7 @@ export default function TheDentalPortCaseStudy() {
                       <div className="w-3 h-3 rounded-full bg-slate-300" />
                       <div className="w-3 h-3 rounded-full bg-slate-300" />
                       <div className="w-3 h-3 rounded-full bg-slate-300" />
-                      <div className="mx-auto bg-white rounded px-24 py-1 flex items-center text-xs text-slate-400 shadow-sm border border-slate-200">
+                      <div className="mx-auto bg-white rounded px-24 py-1 flex items-center text-sm text-slate-400 shadow-sm border border-slate-200">
                         thedentalport.com
                       </div>
                     </div>
@@ -271,10 +271,10 @@ export default function TheDentalPortCaseStudy() {
                            <div className="w-6 h-6 rounded-md bg-blue-600 flex items-center justify-center">
                              <div className="w-3 h-3 bg-white rounded-sm" />
                            </div>
-                           <div className="font-bold text-slate-800 text-sm">The Dental Port</div>
+                           <div className="font-bold text-slate-800 text-base">The Dental Port</div>
                         </div>
                         <div className="flex items-center gap-6">
-                          <div className="hidden sm:flex gap-4 text-xs font-semibold text-slate-600">
+                          <div className="hidden sm:flex gap-4 text-sm font-semibold text-slate-600">
                             <span>Treatments</span>
                             <span>Our Team</span>
                             <span>Contact</span>
@@ -326,7 +326,7 @@ export default function TheDentalPortCaseStudy() {
                 </div>
 
                 <div className="absolute bottom-6 left-6 z-20">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-base font-medium">
                     <CheckCircle2 className="h-4 w-4 text-green-500" />
                     Medical UI Architecture
                   </div>

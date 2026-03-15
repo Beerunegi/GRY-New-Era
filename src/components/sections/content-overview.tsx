@@ -33,7 +33,7 @@ export function ContentOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Intent Focused</h4>
-                   <p className="text-xs text-muted-foreground">Mapping content to specific user search intent.</p>
+                   <p className="text-sm text-muted-foreground">Mapping content to specific user search intent.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function ContentOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Audience First</h4>
-                   <p className="text-xs text-muted-foreground">Human-centric writing that builds loyalty.</p>
+                   <p className="text-sm text-muted-foreground">Human-centric writing that builds loyalty.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function ContentOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Build Brand Authority</h4>
-                      <p className="text-sm text-muted-foreground">Position your business as a thought leader in your industry through expert insights.</p>
+                      <p className="text-base text-muted-foreground">Position your business as a thought leader in your industry through expert insights.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Organic Link Building</h4>
-                      <p className="text-sm text-muted-foreground">High-quality content naturally attracts backlinks, boosting your overall domain rankings.</p>
+                      <p className="text-base text-muted-foreground">High-quality content naturally attracts backlinks, boosting your overall domain rankings.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Improved Conversions</h4>
-                      <p className="text-sm text-muted-foreground">Educational content removes buying friction and empowers users to make decisions.</p>
+                      <p className="text-base text-muted-foreground">Educational content removes buying friction and empowers users to make decisions.</p>
                    </div>
                 </li>
              </ul>

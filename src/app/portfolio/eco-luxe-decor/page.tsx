@@ -27,7 +27,7 @@ export default function EcoLuxeDecorCaseStudy() {
       <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
               Shopify & SEO Case Study
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -42,22 +42,22 @@ export default function EcoLuxeDecorCaseStudy() {
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <TrendingUp className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">$2,500</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Monthly Sales (0 to 6 mo)</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Monthly Sales (0 to 6 mo)</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Search className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">Ranking</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">High Organic Traffic</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">High Organic Traffic</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Layout className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">Custom</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">UX & Store Design</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">UX & Store Design</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Gauge className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">99/100</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Performance Score</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Performance Score</p>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function EcoLuxeDecorCaseStudy() {
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
                 Client Overview
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -90,7 +90,7 @@ export default function EcoLuxeDecorCaseStudy() {
             </div>
             
             <div className="bg-muted/30 p-8 md:p-10 rounded-3xl border">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
                 The Challenge
               </div>
               <h3 className="text-2xl font-bold mb-4">Starting from Scratch</h3>
@@ -103,7 +103,7 @@ export default function EcoLuxeDecorCaseStudy() {
                   "No existing customer base or brand recognition (Starting at $0 revenue)."
                 ].map((challenge, index) => (
                   <li key={index} className="flex gap-3 text-muted-foreground items-start">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-sm font-medium mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-base font-medium mt-0.5">
                       {index + 1}
                     </span>
                     <span>{challenge}</span>
@@ -209,7 +209,7 @@ export default function EcoLuxeDecorCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">$2,500/mo</div>
-                    <div className="text-sm text-muted-foreground">Sales growth from $0 within 6 months</div>
+                    <div className="text-base text-muted-foreground">Sales growth from $0 within 6 months</div>
                   </div>
                 </div>
                 
@@ -219,7 +219,7 @@ export default function EcoLuxeDecorCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">Organic Traffic</div>
-                    <div className="text-sm text-muted-foreground">Dominating niche lighting keywords</div>
+                    <div className="text-base text-muted-foreground">Dominating niche lighting keywords</div>
                   </div>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function EcoLuxeDecorCaseStudy() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {["Shopify Plus", "Google Analytics 4", "Google Search Console", "Ahrefs", "Semrush", "Figma"].map((tool) => (
-                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-sm font-medium rounded-full border">
+                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-base font-medium rounded-full border">
                       {tool}
                     </span>
                   ))}
@@ -256,7 +256,7 @@ export default function EcoLuxeDecorCaseStudy() {
                       <div className="w-3 h-3 rounded-full bg-red-400" />
                       <div className="w-3 h-3 rounded-full bg-amber-400" />
                       <div className="w-3 h-3 rounded-full bg-green-400" />
-                      <div className="mx-auto bg-white rounded px-24 py-1 flex items-center text-xs text-neutral-500 shadow-sm border border-neutral-200">
+                      <div className="mx-auto bg-white rounded px-24 py-1 flex items-center text-sm text-neutral-500 shadow-sm border border-neutral-200">
                         ecoluxedecor.com
                       </div>
                     </div>
@@ -265,7 +265,7 @@ export default function EcoLuxeDecorCaseStudy() {
                       {/* Fake header */}
                       <div className="h-16 border-b flex items-center justify-between px-8 bg-white">
                         <div className="font-serif text-xl tracking-widest text-neutral-900">ECO LUXE MENU</div>
-                        <div className="flex gap-6 text-sm text-neutral-500 uppercase tracking-widest text-xs">
+                        <div className="flex gap-6 text-base text-neutral-500 uppercase tracking-widest text-sm">
                           <span>Lighting</span>
                           <span>Decor</span>
                           <span className="text-amber-700">Cart (0)</span>
@@ -297,7 +297,7 @@ export default function EcoLuxeDecorCaseStudy() {
                 </div>
 
                 <div className="absolute bottom-6 left-6 z-20">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-base font-medium">
                     <CheckCircle2 className="h-4 w-4 text-green-500" />
                     Premium eCommerce Architecture
                   </div>

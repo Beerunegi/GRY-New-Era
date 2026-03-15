@@ -30,7 +30,7 @@ export function AboutStory() {
           {/* Floating stat card */}
           <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-card p-6 rounded-2xl border border-border shadow-2xl max-w-[200px] hidden md:block">
             <div className="text-4xl font-bold text-primary mb-1">150+</div>
-            <div className="text-sm font-medium text-muted-foreground">Successful Brand Partnerships</div>
+            <div className="text-base font-medium text-muted-foreground">Successful Brand Partnerships</div>
           </div>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function AboutStory() {
                 <Target className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-base">
                 To empower brands with cutting-edge digital strategies that drive sustainable growth.
               </p>
             </div>
@@ -70,7 +70,7 @@ export function AboutStory() {
                 <Eye className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-base">
                 To be the most innovative and results-oriented digital growth partner globally.
               </p>
             </div>

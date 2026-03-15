@@ -70,13 +70,13 @@ export function BlogSection() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm border border-white/20">
+              <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold uppercase tracking-wider shadow-sm border border-white/20">
                 {post.category}
               </div>
             </Link>
             
             <div className="p-6 flex-1 flex flex-col">
-              <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4 font-medium">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4 font-medium">
                 <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {post.date}</span>
                 <span className="flex items-center gap-1"><User className="w-3.5 h-3.5" /> {post.author}</span>
               </div>
@@ -85,11 +85,11 @@ export function BlogSection() {
                 <h3 className="text-xl font-bold mb-3 leading-snug">{post.title}</h3>
               </Link>
               
-              <p className="text-muted-foreground text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+              <p className="text-muted-foreground text-base mb-6 flex-1 line-clamp-3 leading-relaxed">
                 {post.excerpt}
               </p>
               
-              <Link href="#" className="text-primary font-medium text-sm inline-flex items-center hover:underline mt-auto">
+              <Link href="#" className="text-primary font-medium text-base inline-flex items-center hover:underline mt-auto">
                 Read Article <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>

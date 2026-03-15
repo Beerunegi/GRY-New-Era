@@ -50,7 +50,7 @@ export function SMProcess() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Our <span className="text-primary">Social Formula</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           A systematic approach to building a brand that's not just visible, but loved.
         </p>
       </div>
@@ -77,11 +77,11 @@ export function SMProcess() {
               {/* Content Card */}
               <div className="w-full sm:w-1/2 sm:px-8 ml-12 sm:ml-0">
                 <div className="p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-                  <div className={`w-8 h-8 rounded-lg ${step.color} flex items-center justify-center text-white font-bold text-xs mb-4`}>
+                  <div className={`w-8 h-8 rounded-lg ${step.color} flex items-center justify-center text-white font-bold text-sm mb-4`}>
                     0{i + 1}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>

@@ -36,7 +36,7 @@ export function SMCaseStudies() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Social <span className="text-primary">Impact</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           Transforming digital presence into community-driven brand authority.
         </p>
       </div>

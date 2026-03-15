@@ -61,7 +61,7 @@ export function ContentBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -79,7 +79,7 @@ export function ContentBenefits() {
              <div className="relative z-10 w-full h-full rounded-[3rem] bg-card border border-border p-12 overflow-hidden flex flex-col justify-center">
                 <div className="mb-8 text-center text-primary">
                    <div className="text-6xl font-black mb-2">447%</div>
-                   <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Average Traffic Increase</p>
+                   <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Average Traffic Increase</p>
                 </div>
                 
                 <div className="space-y-6">
@@ -87,13 +87,13 @@ export function ContentBenefits() {
                       <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500">
                          <BarChart3 className="w-5 h-5" />
                       </div>
-                      <div className="text-sm font-bold">Compound Growth YoY</div>
+                      <div className="text-base font-bold">Compound Growth YoY</div>
                    </div>
                    <div className="p-4 rounded-xl bg-muted/30 border border-border flex items-center gap-4">
                       <div className="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center text-rose-500">
                          <Heart className="w-5 h-5" />
                       </div>
-                      <div className="text-sm font-bold">Brand Loyalty Metrics</div>
+                      <div className="text-base font-bold">Brand Loyalty Metrics</div>
                    </div>
                 </div>
              </div>

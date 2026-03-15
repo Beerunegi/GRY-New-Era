@@ -36,7 +36,7 @@ export function AIOCaseStudies() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           AI-Driven <span className="text-primary">Dominance</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           Proven results in securing brand placement across major generative AI platforms.
         </p>
       </div>

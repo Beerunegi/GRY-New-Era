@@ -29,7 +29,7 @@ export default function MotherlandGroceriesCaseStudy() {
       <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground">
               eCommerce Case Study
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -44,22 +44,22 @@ export default function MotherlandGroceriesCaseStudy() {
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <TrendingUp className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">+45%</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Increase in Sales</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Increase in Sales</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Users className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">+30%</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Website Traffic</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Website Traffic</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <ShoppingCart className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">Optimized</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Shopify Store</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Shopify Store</p>
               </div>
               <div className="flex flex-col items-center justify-center p-6 bg-background rounded-2xl shadow-sm border">
                 <Target className="h-8 w-8 text-primary mb-3" />
                 <h3 className="text-3xl font-bold">High ROI</h3>
-                <p className="text-sm text-muted-foreground mt-1 text-center">Google Shopping</p>
+                <p className="text-base text-muted-foreground mt-1 text-center">Google Shopping</p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function MotherlandGroceriesCaseStudy() {
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-transparent bg-secondary text-secondary-foreground mb-4">
                 Client Overview
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -92,7 +92,7 @@ export default function MotherlandGroceriesCaseStudy() {
             </div>
             
             <div className="bg-muted/30 p-8 md:p-10 rounded-3xl border">
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-sm font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-base font-semibold border-destructive/20 bg-destructive/10 text-destructive mb-6">
                 The Challenge
               </div>
               <h3 className="text-2xl font-bold mb-4">Obstacles to Scale</h3>
@@ -105,7 +105,7 @@ export default function MotherlandGroceriesCaseStudy() {
                   "A Shopify setup that lacked crucial conversion rate optimization (CRO) elements."
                 ].map((challenge, index) => (
                   <li key={index} className="flex gap-3 text-muted-foreground items-start">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-sm font-medium mt-0.5">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-background border flex items-center justify-center text-base font-medium mt-0.5">
                       {index + 1}
                     </span>
                     <span>{challenge}</span>
@@ -211,7 +211,7 @@ export default function MotherlandGroceriesCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">+45% Sales</div>
-                    <div className="text-sm text-muted-foreground">Year-Over-Year Revenue Growth</div>
+                    <div className="text-base text-muted-foreground">Year-Over-Year Revenue Growth</div>
                   </div>
                 </div>
                 
@@ -221,7 +221,7 @@ export default function MotherlandGroceriesCaseStudy() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold">+30% Traffic</div>
-                    <div className="text-sm text-muted-foreground">Increase in Organic & Paid Visits</div>
+                    <div className="text-base text-muted-foreground">Increase in Organic & Paid Visits</div>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function MotherlandGroceriesCaseStudy() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {["Shopify", "Google Merchant Center", "Google Ads", "Google Analytics 4", "Semrush"].map((tool) => (
-                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-sm font-medium rounded-full border">
+                    <span key={tool} className="px-3 py-1.5 bg-muted text-foreground text-base font-medium rounded-full border">
                       {tool}
                     </span>
                   ))}
@@ -255,7 +255,7 @@ export default function MotherlandGroceriesCaseStudy() {
                       <div className="w-3 h-3 rounded-full bg-red-500/80" />
                       <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                       <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                      <div className="mx-auto bg-white/10 rounded px-24 py-1 flex items-center text-xs text-white/50">
+                      <div className="mx-auto bg-white/10 rounded px-24 py-1 flex items-center text-sm text-white/50">
                         motherlandgroceries.com
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export default function MotherlandGroceriesCaseStudy() {
                       {/* Fake header */}
                       <div className="h-12 border-b flex items-center justify-between px-6 bg-slate-50">
                         <div className="font-bold text-slate-800">Motherland Groceries</div>
-                        <div className="flex gap-4 text-sm text-slate-500">
+                        <div className="flex gap-4 text-base text-slate-500">
                           <span>Categories</span>
                           <span>Deals</span>
                           <span>Cart (3)</span>
@@ -291,7 +291,7 @@ export default function MotherlandGroceriesCaseStudy() {
                 </div>
 
                 <div className="absolute bottom-6 left-6 z-20">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-sm font-medium">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm border shadow-sm text-base font-medium">
                     <CheckCircle2 className="h-4 w-4 text-green-500" />
                     High-Converting Design
                   </div>

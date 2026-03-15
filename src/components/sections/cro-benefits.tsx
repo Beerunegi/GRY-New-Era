@@ -61,7 +61,7 @@ export function CROBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -87,7 +87,7 @@ export function CROBenefits() {
                    <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
                       <div className="h-full w-[85%] bg-primary rounded-full" />
                    </div>
-                   <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                   <div className="flex justify-between text-sm font-bold uppercase tracking-widest text-muted-foreground">
                       <span>Conversion Growth</span>
                       <span className="text-primary">85%</span>
                    </div>

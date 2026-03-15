@@ -50,7 +50,7 @@ export function AnalyticsProcess() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Deployment <span className="text-primary">Process</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           We follow a strict, QA-heavy methodology to ensure your data is perfectly clean from day one.
         </p>
       </div>
@@ -70,9 +70,9 @@ export function AnalyticsProcess() {
                    <div className={`w-12 h-12 rounded-xl ${step.color} text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                       <step.icon className="w-5 h-5" />
                    </div>
-                   <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4">Phase 0{i+1}</div>
+                   <div className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-4">Phase 0{i+1}</div>
                    <h3 className="text-lg font-bold mb-4">{step.title}</h3>
-                   <p className="text-sm text-muted-foreground leading-relaxed mt-auto">
+                   <p className="text-base text-muted-foreground leading-relaxed mt-auto">
                       {step.description}
                    </p>
                 </div>

@@ -57,7 +57,7 @@ export function BrandingFAQ() {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Branding <span className="text-primary">FAQ</span>
           </h2>
-          <p className="text-base text-muted-foreground opacity-80">
+          <p className="text-lg text-muted-foreground opacity-80">
             Common questions about our creative process and deliverables.
           </p>
         </div>
@@ -72,10 +72,10 @@ export function BrandingFAQ() {
               viewport={{ once: true }}
             >
               <AccordionItem value={`item-${i}`} className="border-border/50 px-4">
-                <AccordionTrigger className="text-left font-bold py-6 hover:text-primary transition-colors text-base">
+                <AccordionTrigger className="text-left font-bold py-6 hover:text-primary transition-colors text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed text-sm pb-6">
+                <AccordionContent className="text-muted-foreground leading-relaxed text-base pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

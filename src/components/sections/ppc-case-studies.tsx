@@ -36,7 +36,7 @@ export function PPCCaseStudies() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
           PPC <span className="text-primary">Performance</span>
         </h2>
-        <p className="text-base text-muted-foreground opacity-80">
+        <p className="text-lg text-muted-foreground opacity-80">
           Measurable sales and lead growth achieved through calculated, high-ROI paid campaigns.
         </p>
       </div>

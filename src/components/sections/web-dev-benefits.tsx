@@ -61,7 +61,7 @@ export function WebDevBenefits() {
                   <benefit.icon className="w-5 h-5" />
                 </div>
                 <h4 className="font-bold mb-2">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -87,7 +87,7 @@ export function WebDevBenefits() {
                    <div className="h-2 w-full bg-muted rounded-full">
                       <div className="h-full w-[95%] bg-primary rounded-full" />
                    </div>
-                   <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                   <div className="flex justify-between text-sm font-bold uppercase tracking-widest text-muted-foreground">
                       <span>Speed Performance</span>
                       <span className="text-primary">95/100</span>
                    </div>

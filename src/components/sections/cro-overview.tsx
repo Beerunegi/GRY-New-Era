@@ -33,7 +33,7 @@ export function CROOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">User Behavior</h4>
-                   <p className="text-xs text-muted-foreground">Deep analysis of how users interact with your site.</p>
+                   <p className="text-sm text-muted-foreground">Deep analysis of how users interact with your site.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function CROOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Metric Focused</h4>
-                   <p className="text-xs text-muted-foreground">Data-driven decisions to boost your bottom line.</p>
+                   <p className="text-sm text-muted-foreground">Data-driven decisions to boost your bottom line.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function CROOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Lower Customer Acquisition Cost</h4>
-                      <p className="text-sm text-muted-foreground">Get more value from the traffic you already have without spending more on ads.</p>
+                      <p className="text-base text-muted-foreground">Get more value from the traffic you already have without spending more on ads.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Enhanced User Experience</h4>
-                      <p className="text-sm text-muted-foreground">A smoother, more intuitive site leads to happier customers and higher brand loyalty.</p>
+                      <p className="text-base text-muted-foreground">A smoother, more intuitive site leads to happier customers and higher brand loyalty.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Data-Backed Growth</h4>
-                      <p className="text-sm text-muted-foreground">Eliminate the guesswork and make changes based on proven user data and results.</p>
+                      <p className="text-base text-muted-foreground">Eliminate the guesswork and make changes based on proven user data and results.</p>
                    </div>
                 </li>
              </ul>

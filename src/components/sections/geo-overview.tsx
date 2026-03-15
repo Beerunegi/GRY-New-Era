@@ -33,7 +33,7 @@ export function GEOOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">LLM Training Data</h4>
-                   <p className="text-xs text-muted-foreground">Structuring content for machine ingestion.</p>
+                   <p className="text-sm text-muted-foreground">Structuring content for machine ingestion.</p>
                 </div>
              </div>
              <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export function GEOOverview() {
                 </div>
                 <div>
                    <h4 className="font-bold mb-1">Citation Accuracy</h4>
-                   <p className="text-xs text-muted-foreground">Ensuring AI cites your business correctly.</p>
+                   <p className="text-sm text-muted-foreground">Ensuring AI cites your business correctly.</p>
                 </div>
              </div>
           </div>
@@ -64,21 +64,21 @@ export function GEOOverview() {
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">AI-First Discovery</h4>
-                      <p className="text-sm text-muted-foreground">Users are increasingly using ChatGPT and Perplexity for product discovery instead of traditional search.</p>
+                      <p className="text-base text-muted-foreground">Users are increasingly using ChatGPT and Perplexity for product discovery instead of traditional search.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-white shrink-0 font-bold">02</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Trust & Authority</h4>
-                      <p className="text-sm text-muted-foreground">Being cited by an AI model provides immediate authority and trust to your brand identity.</p>
+                      <p className="text-base text-muted-foreground">Being cited by an AI model provides immediate authority and trust to your brand identity.</p>
                    </div>
                 </li>
                 <li className="flex gap-6">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
                    <div>
                       <h4 className="font-bold mb-2 text-lg">Zero-Click Search</h4>
-                      <p className="text-sm text-muted-foreground">Google SGE (Search Generative Experience) answers queries directly, making top organic spots less visible.</p>
+                      <p className="text-base text-muted-foreground">Google SGE (Search Generative Experience) answers queries directly, making top organic spots less visible.</p>
                    </div>
                 </li>
              </ul>

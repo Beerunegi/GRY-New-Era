@@ -41,7 +41,7 @@ export function CourseRegistrationForm() {
                     <PhoneCall className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold uppercase tracking-widest text-primary-foreground/60 mb-1">Direct Call</div>
+                    <div className="text-base font-bold uppercase tracking-widest text-primary-foreground/60 mb-1">Direct Call</div>
                     <div className="text-xl font-bold">+91 9871264699</div>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ export function CourseRegistrationForm() {
                     <GraduationCap className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold uppercase tracking-widest text-primary-foreground/60 mb-1">Our Campus</div>
+                    <div className="text-base font-bold uppercase tracking-widest text-primary-foreground/60 mb-1">Our Campus</div>
                     <div className="text-lg font-medium leading-snug">
                        3rd floor, A-303, Sector 5, Sahibabad, Ghaziabad, UP 201005
                     </div>
@@ -67,22 +67,22 @@ export function CourseRegistrationForm() {
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
+                  <label className="text-base font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
                   <Input placeholder="John Doe" className="h-12 bg-muted/30 border-border focus:ring-2 ring-primary/20" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Phone Number</label>
+                  <label className="text-base font-bold uppercase tracking-wider text-muted-foreground">Phone Number</label>
                   <Input placeholder="+91 9876543210" className="h-12 bg-muted/30 border-border focus:ring-2 ring-primary/20" />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Email Address</label>
+                <label className="text-base font-bold uppercase tracking-wider text-muted-foreground">Email Address</label>
                 <Input placeholder="john@example.com" type="email" className="h-12 bg-muted/30 border-border focus:ring-2 ring-primary/20" />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Choose Program</label>
+                <label className="text-base font-bold uppercase tracking-wider text-muted-foreground">Choose Program</label>
                 <Select>
                   <SelectTrigger className="h-14 bg-muted/30 border-border">
                     <SelectValue placeholder="Select a course program" />
@@ -96,14 +96,14 @@ export function CourseRegistrationForm() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Message (Optional)</label>
+                <label className="text-base font-bold uppercase tracking-wider text-muted-foreground">Message (Optional)</label>
                 <Textarea placeholder="How can we help you?" className="min-h-[120px] bg-muted/30 border-border focus:ring-2 ring-primary/20" />
               </div>
 
               <Button className="w-full h-14 text-lg font-bold shadow-xl shadow-primary/20 group">
                 Register for Free Consultation <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="text-center text-sm text-muted-foreground">
                 By clicking "Register", you agree to our Terms and Privacy Policy.
               </p>
             </form>

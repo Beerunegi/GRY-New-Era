@@ -16,7 +16,7 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-base mb-6">
             Get In Touch
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
@@ -45,7 +45,7 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold text-lg mb-1">Call Us</h4>
                 <p className="text-muted-foreground">9871264699</p>
-                <p className="text-sm text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
+                <p className="text-base text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold text-lg mb-1">Email</h4>
                 <p className="text-muted-foreground">info@newdigitalera.in</p>
-                <p className="text-sm text-muted-foreground">We usually respond within 24 hours.</p>
+                <p className="text-base text-muted-foreground">We usually respond within 24 hours.</p>
               </div>
             </div>
           </div>
@@ -74,22 +74,22 @@ export function ContactSection() {
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="firstName" className="text-sm font-medium">First Name</label>
+                <label htmlFor="firstName" className="text-base font-medium">First Name</label>
                 <input id="firstName" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John" />
               </div>
               <div className="space-y-2">
-                <label htmlFor="lastName" className="text-sm font-medium">Last Name</label>
+                <label htmlFor="lastName" className="text-base font-medium">Last Name</label>
                 <input id="lastName" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Doe" />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">Work Email</label>
+              <label htmlFor="email" className="text-base font-medium">Work Email</label>
               <input id="email" type="email" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@company.com" />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="service" className="text-sm font-medium">Service Interested In</label>
+              <label htmlFor="service" className="text-base font-medium">Service Interested In</label>
               <select id="service" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-muted-foreground appearance-none">
                 <option value="">Select a service</option>
                 <option value="seo">SEO & Content</option>
@@ -101,11 +101,11 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">Project Details</label>
+              <label htmlFor="message" className="text-base font-medium">Project Details</label>
               <textarea id="message" rows={4} className="w-full p-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="Tell us about your goals, current challenges, and timeline..."></textarea>
             </div>
 
-            <Button size="lg" className="w-full h-14 text-base">
+            <Button size="lg" className="w-full h-14 text-lg">
               Submit Request <Send className="w-5 h-5 ml-2" />
             </Button>
           </form>

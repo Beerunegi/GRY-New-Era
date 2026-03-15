@@ -18,7 +18,7 @@ export function CROHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm border border-primary/20">
               <Target className="w-3.5 h-3.5" /> Maximize Your ROI
             </div>
             
@@ -32,7 +32,7 @@ export function CROHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button size="lg" className="h-14 px-10 text-base shadow-xl shadow-primary/20 font-bold group">
+              <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-primary/20 font-bold group">
                 Get Free CRO Audit <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
@@ -42,13 +42,13 @@ export function CROHero() {
                 <div className="p-2 rounded-xl bg-primary/5 border border-primary/10">
                   <TrendingUp className="w-5 h-5 text-primary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Data Driven</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Data Driven</div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-secondary/5 border border-secondary/10">
                   <Zap className="w-5 h-5 text-secondary" />
                 </div>
-                <div className="text-sm font-bold opacity-80 uppercase tracking-widest text-[10px]">Rapid Growth</div>
+                <div className="text-base font-bold opacity-80 uppercase tracking-widest text-[10px]">Rapid Growth</div>
               </div>
             </div>
           </motion.div>

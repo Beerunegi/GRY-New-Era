@@ -85,7 +85,7 @@ export function PortfolioGridFilter() {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+            className={`px-6 py-2.5 rounded-full text-base font-bold transition-all duration-300 ${
               activeCategory === category 
                 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105" 
                 : "bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/50"
@@ -121,7 +121,7 @@ export function PortfolioGridFilter() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               
               {/* Hover Badge */}
-              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold border border-white/10 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-sm font-bold border border-white/10 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 View Project
               </div>
 
@@ -131,13 +131,13 @@ export function PortfolioGridFilter() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <div className="text-primary font-bold text-xs uppercase tracking-wider mb-2 drop-shadow-md">
+                <div className="text-primary font-bold text-sm uppercase tracking-wider mb-2 drop-shadow-md">
                   {project.category}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 leading-tight drop-shadow-md">
                   {project.title}
                 </h3>
-                <div className="inline-flex items-center gap-2 text-sm font-medium text-white/80 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                <div className="inline-flex items-center gap-2 text-base font-medium text-white/80 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
                   <ExternalLink className="w-4 h-4" />
                   {project.stats}
                 </div>

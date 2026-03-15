@@ -18,7 +18,7 @@ export function CoursePageHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-medium text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-medium text-base mb-6">
               <GraduationCap className="w-4 h-4" /> New Digital Era Academy
             </div>
             
@@ -32,10 +32,10 @@ export function CoursePageHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="h-14 px-8 text-base shadow-xl shadow-primary/20">
+              <Button size="lg" className="h-14 px-8 text-lg shadow-xl shadow-primary/20">
                 View All Programs <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-base bg-background/50 backdrop-blur-sm group">
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-background/50 backdrop-blur-sm group">
                 <PlayCircle className="w-5 h-5 mr-2 text-primary" /> Watch Trailer
               </Button>
             </div>
@@ -51,7 +51,7 @@ export function CoursePageHero() {
                   5k+
                 </div>
               </div>
-              <div className="text-sm font-medium">
+              <div className="text-base font-medium">
                 <span className="text-primary">Trusted by 5,000+</span> satisfied students
               </div>
             </div>
@@ -76,7 +76,7 @@ export function CoursePageHero() {
             {/* Absolute badge */}
             <div className="absolute -bottom-10 -left-10 bg-card p-6 rounded-2xl border border-border shadow-2xl hidden md:block animate-bounce-slow">
               <div className="text-3xl font-bold mb-1">100%</div>
-              <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Placement Support</div>
+              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Placement Support</div>
             </div>
           </motion.div>
         </div>
