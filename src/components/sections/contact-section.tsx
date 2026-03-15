@@ -34,7 +34,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-1">Headquarters</h4>
-                <p className="text-muted-foreground">123 Innovation Drive, Suite 500<br/>San Francisco, CA 94103</p>
+                <p className="text-muted-foreground">3rd floor, A-303, Sector 5<br/>Sahibabad, Ghaziabad, Uttar Pradesh 201005</p>
               </div>
             </div>
             
@@ -44,7 +44,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-1">Call Us</h4>
-                <p className="text-muted-foreground">+1 (800) 555-0199</p>
+                <p className="text-muted-foreground">9871264699</p>
                 <p className="text-sm text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-1">Email</h4>
-                <p className="text-muted-foreground">hello@newdigitalera.com</p>
+                <p className="text-muted-foreground">info@newdigitalera.in</p>
                 <p className="text-sm text-muted-foreground">We usually respond within 24 hours.</p>
               </div>
             </div>
