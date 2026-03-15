@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/section";
 import { 
   Building2, 
   Handshake, 
-  MagnetLine, 
+  Star, 
   TrendingUp,
   ShieldAlert
 } from "lucide-react";
@@ -19,7 +19,7 @@ const benefits = [
   {
     title: "Attract Top Talent",
     description: "A pristine corporate reputation ensures HR can recruit and retain the best employees in the industry.",
-    icon: MagnetLine
+    icon: Star
   },
   {
     title: "Partnership Trust",
