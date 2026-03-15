@@ -62,16 +62,16 @@ export function CROFAQ() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-              viewport={{ once: true }}
-            >
-              <AccordionItem value={`item-${i}`} className="border-border/50 px-4">
+
+              <AccordionItem key={i} value={`item-${i}`} className="border-border/50 px-4">
                 <AccordionTrigger className="text-left font-bold py-6 hover:text-primary transition-colors text-lg">
                   {faq.question}
                 </AccordionTrigger>
@@ -79,9 +79,9 @@ export function CROFAQ() {
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            </motion.div>
           ))}
         </Accordion>
+        </motion.div>
       </div>
     </Section>
   );
