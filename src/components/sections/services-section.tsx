@@ -22,13 +22,13 @@ const services = [
   {
     title: "SEO Optimization",
     description: "Dominate search rankings and drive organic traffic that converts into loyal customers.",
-    image: "https://images.unsplash.com/photo-1572177812156-58036aae439c?q=80&w=600&auto=format&fit=crop",
+    image: "/images/services/seo-optimization-visual.svg?v=2",
     href: "/services/seo"
   },
   {
     title: "Social Media Marketing",
     description: "Engaging social campaigns that build brand authority and community across platforms.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop",
+    image: "/images/services/social-media-marketing-visual.svg?v=2",
     href: "/services/social-media"
   },
   {
@@ -94,6 +94,7 @@ export function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  unoptimized={service.image.includes("/images/services/")}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />

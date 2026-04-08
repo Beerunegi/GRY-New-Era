@@ -27,6 +27,7 @@ const navLinks = [
     ]
   },
   { name: "Courses", href: "/courses" },
+  { name: "Free SEO Audit", href: "/get-free-seo-audit" },
   { name: "Why Us", href: "/#why-us" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contact" },

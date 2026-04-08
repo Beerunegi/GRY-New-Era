@@ -1,11 +1,89 @@
 "use client";
 
+import { ChangeEvent, FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@newdigitalera.in";
+
+type ContactFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  service: string;
+  message: string;
+};
+
+const initialFormData: ContactFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  service: "",
+  message: "",
+};
+
 export function ContactSection() {
+  const [formData, setFormData] = useState<ContactFormData>(initialFormData);
+  const [status, setStatus] = useState<{ type: "idle" | "success" | "error"; message: string }>({
+    type: "idle",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" });
+
+    const payload = new FormData();
+    payload.append("firstName", formData.firstName.trim());
+    payload.append("lastName", formData.lastName.trim());
+    payload.append("name", `${formData.firstName.trim()} ${formData.lastName.trim()}`.trim());
+    payload.append("email", formData.email.trim());
+    payload.append("service", formData.service);
+    payload.append("message", formData.message.trim());
+    payload.append("_subject", "New Digital Era contact form enquiry");
+    payload.append("_template", "table");
+    payload.append("_captcha", "false");
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: payload,
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setFormData(initialFormData);
+      setStatus({
+        type: "success",
+        message: "Your request has been sent successfully. We will get back to you shortly.",
+      });
+    } catch {
+      setStatus({
+        type: "error",
+        message: "We could not send your request right now. Please try again or email info@newdigitalera.in.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Section id="contact" className="bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -20,7 +98,7 @@ export function ContactSection() {
             Get In Touch
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
-            Let's Start a <br className="hidden md:block"/>
+            Let&apos;s Start a <br className="hidden md:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Conversation</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-12 text-balance">
@@ -71,26 +149,58 @@ export function ContactSection() {
           className="bg-card border border-border/50 rounded-2xl p-8 shadow-sm"
         >
           <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="firstName" className="text-base font-medium">First Name</label>
-                <input id="firstName" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John" />
+                <input
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="John"
+                />
               </div>
               <div className="space-y-2">
                 <label htmlFor="lastName" className="text-base font-medium">Last Name</label>
-                <input id="lastName" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Doe" />
+                <input
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Doe"
+                />
               </div>
             </div>
 
             <div className="space-y-2">
               <label htmlFor="email" className="text-base font-medium">Work Email</label>
-              <input id="email" type="email" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john@company.com" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="john@company.com"
+              />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="service" className="text-base font-medium">Service Interested In</label>
-              <select id="service" className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-muted-foreground appearance-none">
+              <select
+                id="service"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+                className="w-full h-12 px-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-muted-foreground appearance-none"
+              >
                 <option value="">Select a service</option>
                 <option value="seo">SEO & Content</option>
                 <option value="ppc">Paid Ads (PPC)</option>
@@ -102,11 +212,30 @@ export function ContactSection() {
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-base font-medium">Project Details</label>
-              <textarea id="message" rows={4} className="w-full p-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="Tell us about your goals, current challenges, and timeline..."></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full p-4 rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                placeholder="Tell us about your goals, current challenges, and timeline..."
+              />
             </div>
 
-            <Button size="lg" className="w-full h-14 text-lg">
-              Submit Request <Send className="w-5 h-5 ml-2" />
+            {status.type !== "idle" ? (
+              <p
+                className={`text-sm ${status.type === "success" ? "text-green-500" : "text-red-500"}`}
+                aria-live="polite"
+              >
+                {status.message}
+              </p>
+            ) : null}
+
+            <Button size="lg" className="w-full h-14 text-lg" disabled={isSubmitting}>
+              {isSubmitting ? "Sending Request..." : "Submit Request"}
+              <Send className="w-5 h-5 ml-2" />
             </Button>
           </form>
         </motion.div>

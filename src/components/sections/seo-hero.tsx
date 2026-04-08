@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { ArrowRight, Search, BarChart3, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
@@ -32,9 +32,11 @@ export function SEOHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-primary/20 font-bold group">
-                Free SEO Audit <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/get-free-seo-audit" className="group">
+                <span className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-lg font-bold text-primary-foreground shadow-xl shadow-primary/20 transition-all active:scale-95 group-hover:bg-primary/90">
+                  Free SEO Audit <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             </div>
             
             <div className="grid grid-cols-2 gap-8 pt-6 border-t border-border/50 max-w-sm">
@@ -61,9 +63,10 @@ export function SEOHero() {
           >
             <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group bg-muted">
               <Image 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" 
+                src="/images/services/seo-optimization-visual.svg?v=2" 
                 alt="Digital Marketing Analytics and SEO Data Dashboard" 
                 fill 
+                unoptimized
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"
                 priority
               />

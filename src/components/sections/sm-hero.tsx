@@ -61,9 +61,10 @@ export function SMHero() {
           >
             <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-border/50 group bg-muted">
               <Image 
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" 
+                src="/images/services/social-media-marketing-visual.svg?v=2" 
                 alt="Social Media Growth and Content Creation" 
                 fill 
+                unoptimized
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"
                 priority
               />

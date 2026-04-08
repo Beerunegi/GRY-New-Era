@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
+import { getMetadataBase } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,6 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: "New Digital Era | Digital Marketing Agency",
   description: "We help ambitious businesses scale through data-driven digital marketing and premium web experiences.",
 };
