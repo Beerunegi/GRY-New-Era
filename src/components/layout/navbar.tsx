@@ -22,8 +22,8 @@ const navLinks = [
       { name: "Analytics & Tracking", href: "/services/analytics-tracking" },
       { name: "Branding & Creative", href: "/services/branding-creative" },
       { name: "Online Reputation Management", href: "/services/online-reputation-management" },
-      { name: "AI Optimization (AIO)", href: "/services/aio" },
-      { name: "Generative Engine Optimization (GEO)", href: "/services/geo" }
+      { name: "AI Optimization (AIO)", href: "/services/ai-optimization" },
+      { name: "Generative Engine Optimization (GEO)", href: "/services/generative-engine-optimization" }
     ]
   },
   { name: "Courses", href: "/courses" },
