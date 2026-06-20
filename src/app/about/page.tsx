@@ -5,12 +5,9 @@ import { WhyUsSection } from "@/components/sections/why-us-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us | New Digital Era",
-  description: "Learn about the mission, vision, and the expert team behind New Digital Era, a leading digital growth agency.",
-};
+export const metadata = createMetadata({ title: "About Our Ghaziabad Digital Marketing Team", description: "Meet New Digital Era, a Ghaziabad digital marketing team helping businesses across Delhi NCR and India grow through accountable strategy, technology and creative execution.", path: "/about", keywords: ["digital marketing company Ghaziabad", "New Digital Era Ghaziabad", "digital marketing team Delhi NCR"] });
 
 export default function AboutPage() {
   return (

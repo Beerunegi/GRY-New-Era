@@ -18,6 +18,10 @@ export interface PostData {
   author: string;
   excerpt: string;
   featuredImage: string;
+  featuredImageAlt?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  customSchema?: string;
   categories?: string[];
   tags?: string[];
   faqs?: FaqItem[];

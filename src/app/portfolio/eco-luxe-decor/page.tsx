@@ -14,11 +14,9 @@ import {
 } from "lucide-react";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Shopify SEO & eCommerce Growth for Eco Luxe Decor | Case Study",
-  description: "Discover how we launched and grew Eco Luxe Decor from $0 to $2500/month in 6 months through custom Shopify design and strategic SEO.",
-};
+export const metadata = createMetadata({ title: "Shopify SEO Growth for Eco Luxe Decor | Case Study", description: "Discover how custom Shopify design, technical SEO and a focused content strategy helped launch and grow Eco Luxe Decor.", path: "/portfolio/eco-luxe-decor", keywords: ["Shopify SEO case study", "ecommerce web design agency India", "Shopify development portfolio"] });
 
 export default function EcoLuxeDecorCaseStudy() {
   return (

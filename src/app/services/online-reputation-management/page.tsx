@@ -7,12 +7,9 @@ import { ORMFAQ } from "@/components/sections/orm-faq";
 import { PPCCaseStudies } from "@/components/sections/ppc-case-studies";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Online Reputation Management (ORM) Services | New Digital Era",
-  description: "Protect and repair your brand's digital image. Expert review management, content suppression, and proactive 24/7 reputation monitoring.",
-};
+export const metadata = createMetadata({ title: "Online Reputation Management Services in India", description: "Protect brand trust with review management, search result improvement, reputation monitoring and transparent response strategies.", path: "/services/online-reputation-management", keywords: ["online reputation management India", "ORM agency Delhi NCR", "Google review management Ghaziabad"] });
 
 export default function OnlineReputationManagementPage() {
   return (

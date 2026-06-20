@@ -40,7 +40,7 @@ export function Hero() {
             <span className="flex h-2 w-2 rounded-full bg-primary relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             </span>
-            Accelerate your digital growth
+            Digital growth experts in Ghaziabad
           </motion.div>
 
           <motion.h1
@@ -49,9 +49,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white mb-6 drop-shadow-md"
           >
-            Award-Winning Digital{" "}
+            Digital Marketing Agency in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold drop-shadow-none">
-              Marketing Agency
+              Ghaziabad
             </span>
           </motion.h1>
 
@@ -61,7 +61,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl drop-shadow font-light"
           >
-            Data-driven strategies and premium design for explosive brand growth.
+            SEO, AEO, GEO, paid media and premium web experiences for ambitious businesses across Ghaziabad, Delhi NCR and India.
           </motion.p>
 
           <motion.div

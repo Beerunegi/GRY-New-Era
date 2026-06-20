@@ -7,12 +7,9 @@ import { AnalyticsFAQ } from "@/components/sections/analytics-faq";
 import { PPCCaseStudies } from "@/components/sections/ppc-case-studies";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Analytics & Tracking Setup Services (GA4, GTM) | New Digital Era",
-  description: "Measure what matters. Expert setup for Google Analytics 4, Tag Manager, and server-side conversion tracking for accurate marketing ROI.",
-};
+export const metadata = createMetadata({ title: "GA4, GTM & Conversion Tracking Services", description: "Make confident marketing decisions with accurate GA4, Google Tag Manager, consent-aware conversion tracking and actionable reporting dashboards.", path: "/services/analytics-tracking", keywords: ["GA4 setup services India", "Google Tag Manager agency", "conversion tracking Ghaziabad"] });
 
 export default function AnalyticsTrackingPage() {
   return (

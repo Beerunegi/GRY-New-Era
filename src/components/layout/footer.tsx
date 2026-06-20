@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Rocket, Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Rocket, Twitter, Linkedin, Instagram, Facebook, MapPin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -16,8 +16,13 @@ export function Footer() {
               <span className="font-bold text-xl tracking-tight">NEW DIGITAL ERA</span>
             </Link>
             <p className="text-muted-foreground mb-6 text-base leading-relaxed">
-              We help ambitious businesses scale through data-driven digital marketing and premium web experiences.
+              Ghaziabad-based digital marketing experts helping ambitious businesses grow through SEO, AEO, GEO, paid media and premium web experiences.
             </p>
+            <address className="not-italic space-y-2 text-sm text-muted-foreground mb-6">
+              <p className="flex gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0 text-primary" />3rd Floor, A-303, Sector 5, Sahibabad, Ghaziabad, Uttar Pradesh 201005</p>
+              <a href="tel:+919871264699" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4 text-primary" />+91 98712 64699</a>
+              <a href="mailto:info@newdigitalera.in" className="flex items-center gap-2 hover:text-primary"><Mail className="w-4 h-4 text-primary" />info@newdigitalera.in</a>
+            </address>
             <div className="flex gap-4">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="w-5 h-5" />
@@ -59,7 +64,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/courses" className="hover:text-primary transition-colors">Our Academy</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
-              <li><Link href="/#blog" className="hover:text-primary transition-colors">Blog & Insights</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog & Insights</Link></li>
               <li><Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>

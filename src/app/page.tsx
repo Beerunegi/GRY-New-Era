@@ -12,6 +12,14 @@ import { HomeFAQ } from "@/components/sections/home-faq";
 import { AuditSection } from "@/components/sections/audit-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Digital Marketing Agency in Ghaziabad",
+  description: "Grow with a results-driven digital marketing agency in Ghaziabad. New Digital Era delivers SEO, AEO, GEO, PPC, social media and website development across Delhi NCR.",
+  path: "/",
+  keywords: ["digital marketing agency in Ghaziabad", "SEO company Ghaziabad", "digital marketing Delhi NCR", "AEO agency India", "GEO services India"],
+});
 
 export default function Home() {
   return (

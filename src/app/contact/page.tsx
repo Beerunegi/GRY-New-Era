@@ -1,11 +1,8 @@
 import { ContactHero } from "@/components/sections/contact-hero";
 import { ContactSection } from "@/components/sections/contact-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us | New Digital Era",
-  description: "Get in touch with our expert digital marketing and development team. Let's discuss how we can accelerate your business growth today.",
-};
+export const metadata = createMetadata({ title: "Contact Our Digital Marketing Agency in Ghaziabad", description: "Contact New Digital Era in Sahibabad, Ghaziabad for SEO, AEO, GEO, Google Ads, social media and website development consultations across Delhi NCR.", path: "/contact", keywords: ["digital marketing agency Ghaziabad contact", "SEO agency Sahibabad", "digital marketing consultation Delhi NCR"] });
 
 export default function ContactPage() {
   return (

@@ -16,11 +16,9 @@ import {
 } from "lucide-react";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Shopify eCommerce Growth for Motherland Groceries | Case Study",
-  description: "Discover how we increased sales by 45% and website traffic by 30% for Motherland Groceries through optimal Shopify setup, Google Ads, and SEO.",
-};
+export const metadata = createMetadata({ title: "Shopify Growth for Motherland Groceries | Case Study", description: "See how an integrated Shopify, SEO and Google Ads strategy improved traffic and sales for Motherland Groceries.", path: "/portfolio/motherland-groceries", keywords: ["Shopify growth case study", "ecommerce SEO agency India", "Google Ads ecommerce case study"] });
 
 export default function MotherlandGroceriesCaseStudy() {
   return (

@@ -7,12 +7,9 @@ import { WebDevFAQ } from "@/components/sections/web-dev-faq";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Professional Website Development | New Digital Era Agency",
-  description: "Specialized in custom web applications, high-converting eCommerce stores, and premium business websites built with Next.js, React, and WordPress.",
-};
+export const metadata = createMetadata({ title: "Website Development Company in Ghaziabad", description: "Launch a fast, SEO-ready business website, eCommerce store or custom web app with our Next.js, React and WordPress developers in Ghaziabad.", path: "/services/website-development", keywords: ["website development company Ghaziabad", "web design Ghaziabad", "WordPress developer Delhi NCR", "Next.js development India"] });
 
 export default function WebsiteDevelopmentPage() {
   return (

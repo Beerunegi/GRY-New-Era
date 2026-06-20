@@ -5,12 +5,9 @@ import { CourseFeatures } from "@/components/sections/course-features";
 import { CourseRegistrationForm } from "@/components/sections/course-registration-form";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing Courses | New Digital Era Academy",
-  description: "Join the best offline digital marketing courses in Ghaziabad. We offer 3-month, 6-month, and 1-year professional programs with 100% placement support.",
-};
+export const metadata = createMetadata({ title: "Digital Marketing Course in Ghaziabad", description: "Learn SEO, Google Ads, social media, analytics and AI marketing through practical offline digital marketing courses in Ghaziabad with career support.", path: "/courses", keywords: ["digital marketing course in Ghaziabad", "digital marketing institute Ghaziabad", "SEO course Sahibabad", "offline marketing course Delhi NCR"] });
 
 export default function CoursePage() {
   return (

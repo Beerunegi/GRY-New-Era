@@ -7,12 +7,9 @@ import { ProcessSection } from "@/components/sections/process-section";
 import { CourseSection } from "@/components/sections/course-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services | New Digital Era",
-  description: "Explore our premium digital marketing services including SEO, PPC, Branding, Web Development, and Digital Marketing Courses.",
-};
+export const metadata = createMetadata({ title: "Digital Marketing Services in Ghaziabad", description: "Explore SEO, AEO, GEO, Google Ads, social media, branding, analytics and website development services for Ghaziabad, Delhi NCR and India.", path: "/services", keywords: ["digital marketing services Ghaziabad", "online marketing company Delhi NCR", "SEO PPC web development Ghaziabad"] });
 
 export default function ServicesPage() {
   return (

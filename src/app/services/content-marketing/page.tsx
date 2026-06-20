@@ -7,12 +7,9 @@ import { ContentFAQ } from "@/components/sections/content-faq";
 import { SEOCaseStudies } from "@/components/sections/seo-case-studies";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Content Marketing & SEO Strategy | New Digital Era",
-  description: "Drive authority and organic growth with our premium content marketing services. specialized in blog writing, SEO strategy, and brand storytelling.",
-};
+export const metadata = createMetadata({ title: "SEO Content Marketing Services in Ghaziabad", description: "Build topical authority and demand with search-led content strategy, expert articles, landing pages and brand storytelling optimized for search and AI answers.", path: "/services/content-marketing", keywords: ["content marketing Ghaziabad", "SEO content agency Delhi NCR", "AEO content writing India"] });
 
 export default function ContentMarketingPage() {
   return (

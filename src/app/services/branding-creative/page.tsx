@@ -7,12 +7,9 @@ import { BrandingFAQ } from "@/components/sections/branding-faq";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Branding & Creative Design Studio | New Digital Era",
-  description: "Award-winning brand identity, logo design, and creative marketing materials that elevate your business and command attention.",
-};
+export const metadata = createMetadata({ title: "Branding & Creative Design Agency in Ghaziabad", description: "Build a distinctive, consistent brand with strategy, visual identity, logo design and campaign creative from our Ghaziabad design team.", path: "/services/branding-creative", keywords: ["branding agency Ghaziabad", "logo design Ghaziabad", "creative agency Delhi NCR"] });
 
 export default function BrandingCreativePage() {
   return (

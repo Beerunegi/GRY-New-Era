@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { Search, LineChart, CheckCircle2 } from "lucide-react";
 import { AuditSection } from "@/components/sections/audit-section";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Get Free SEO Audit | New Digital Era",
-  description:
-    "Request a free SEO audit from New Digital Era and discover ranking gaps, on-page issues, and fast organic growth opportunities.",
-};
+export const metadata = createMetadata({ title: "Free SEO Audit for Ghaziabad & Delhi NCR Businesses", description: "Request a free SEO audit covering technical issues, local rankings, content gaps and AI-search visibility from New Digital Era's Ghaziabad SEO team.", path: "/get-free-seo-audit", keywords: ["free SEO audit Ghaziabad", "website SEO audit Delhi NCR", "local SEO audit"] });
 
 export default function GetFreeSEOAuditPage() {
   return (

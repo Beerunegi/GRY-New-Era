@@ -7,12 +7,9 @@ import { CROFAQ } from "@/components/sections/cro-faq";
 import { PPCCaseStudies } from "@/components/sections/ppc-case-studies";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Conversion Rate Optimization (CRO) Services | New Digital Era",
-  description: "Improve your website leads and sales with data-driven Conversion Rate Optimization. We use A/B testing and behavioral analytics to maximize your ROI.",
-};
+export const metadata = createMetadata({ title: "Conversion Rate Optimization (CRO) Services", description: "Turn more traffic into leads and sales with research-led CRO, landing page optimization, behavioral analytics and structured experimentation.", path: "/services/conversion-rate-optimization", keywords: ["conversion rate optimization India", "CRO agency Delhi NCR", "landing page optimization Ghaziabad"] });
 
 export default function ConversionOptimizationPage() {
   return (

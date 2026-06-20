@@ -5,12 +5,9 @@ import { ClientsMarquee } from "@/components/sections/clients-marquee";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Work & Portfolio | New Digital Era",
-  description: "Explore our portfolio of high-converting websites, dominant SEO campaigns, and creative digital marketing work driving growth for industry leaders.",
-};
+export const metadata = createMetadata({ title: "Digital Marketing & Web Development Portfolio", description: "Explore SEO, paid media, eCommerce and website development case studies from New Digital Era's digital growth team in Ghaziabad.", path: "/portfolio", keywords: ["digital marketing portfolio India", "web development portfolio Ghaziabad", "SEO case studies Delhi NCR"] });
 
 export default function PortfolioPage() {
   return (

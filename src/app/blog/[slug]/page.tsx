@@ -1,259 +1,78 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { getPostBySlug, getAllPosts, markdownToHtml } from '@/lib/blog';
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowRight, CalendarDays, Clock, Home, Sparkles } from "lucide-react";
+import BlogCard from "@/components/blog/BlogCard";
+import { Newsletter } from "@/components/blog/Newsletter";
+import { SocialShare } from "@/components/blog/SocialShare";
+import { getMetadataBase } from "@/lib/site";
+import { addHeadingIds, getAdjacentPosts, getPostBySlug, getRelatedPosts, readingTime } from "@/lib/wordpress";
 
-// Generate static params for SSG
-export async function generateStaticParams() {
-  const posts = getAllPosts(['slug']);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const revalidate = 900;
 
-// Dynamic SEO metadata
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const resolvedParams = await params;
-  try {
-    const post = getPostBySlug(resolvedParams.slug, [
-      'title',
-      'excerpt',
-      'featuredImage',
-      'author',
-      'date',
-    ]);
-
-    if (!post) {
-      return {};
-    }
-
-    return {
-      title: `${post.title} | Blog`,
-      description: post.excerpt,
-      openGraph: {
-        title: post.title,
-        description: post.excerpt,
-        type: 'article',
-        publishedTime: post.date,
-        authors: [post.author],
-        images: [
-          {
-            url: post.featuredImage || '',
-            width: 1200,
-            height: 630,
-            alt: post.title,
-          },
-        ],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: post.title,
-        description: post.excerpt,
-        images: [post.featuredImage || ''],
-      },
-    };
-  } catch (e) {
-    return {};
-  }
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) return { title: "Article not found | New Digital Era" };
+  const canonical = `/blog/${post.slug}`;
+  const description = post.seoDescription || post.excerpt;
+  return {
+    title: { absolute: post.seoTitle || `${post.title} | New Digital Era` }, description,
+    alternates: { canonical },
+    authors: [{ name: post.author.name }],
+    openGraph: { title: post.title, description, type: "article", url: canonical, publishedTime: post.date, modifiedTime: post.modified, authors: [post.author.name], section: post.categories[0]?.name, images: post.featuredImage ? [{ url: post.featuredImage, alt: post.featuredImageAlt || post.title }] : [] },
+    twitter: { card: "summary_large_image", title: post.title, description, images: post.featuredImage ? [post.featuredImage] : [] },
+  };
 }
 
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = await params;
-  let post;
-  try {
-    post = getPostBySlug(resolvedParams.slug, [
-      'title',
-      'date',
-      'slug',
-      'author',
-      'content',
-      'featuredImage',
-      'categories',
-      'tags',
-      'faqs',
-    ]);
-  } catch (e) {
-    return notFound();
-  }
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) notFound();
 
-  if (!post) {
-    return notFound();
-  }
-
-  const contentHtml = await markdownToHtml(post.content || '');
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
-  const postUrl = `${baseUrl}/blog/${post.slug}`;
-
-  // 1. Article Schema
+  const [{ previous, next }, related] = await Promise.all([getAdjacentPosts(post), getRelatedPosts(post)]);
+  const { html, items } = addHeadingIds(post.content);
+  const siteUrl = getMetadataBase().toString().replace(/\/$/, "");
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
+  const date = new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "long", year: "numeric" }).format(new Date(post.date));
   const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    image: [post.featuredImage],
-    datePublished: post.date,
-    dateModified: post.date,
-    author: [{
-      '@type': 'Person',
-      name: post.author,
-    }],
+    "@context": "https://schema.org", "@type": "Article", headline: post.title, description: post.seoDescription || post.excerpt,
+    image: post.featuredImage ? [post.featuredImage] : undefined, datePublished: post.date, dateModified: post.modified,
+    mainEntityOfPage: postUrl, author: { "@type": "Person", name: post.author.name },
+    publisher: { "@type": "Organization", name: "New Digital Era", url: siteUrl },
   };
+  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+    { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+  ] };
+  const faqSchema = post.faqs.length ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: post.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) } : null;
 
-  // 2. Breadcrumb Schema
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: baseUrl,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: `${baseUrl}/blog`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: postUrl,
-      },
-    ],
-  };
+  return <main className="article-page">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }} />
+    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }} />}
 
-  // 3. FAQ Schema
-  const faqSchema = post.faqs && post.faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: post.faqs.map((faq: any) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  } : null;
+    <header className="article-hero"><div className="blog-orb blog-orb--one" /><div className="blog-container article-hero__inner">
+      {post.featuredImage && <div className="article-cover"><Image src={post.featuredImage} alt={post.featuredImageAlt || post.title} fill priority sizes="(max-width: 1200px) 100vw, 1200px" /></div>}
+      <nav className="article-breadcrumb" aria-label="Breadcrumb"><Link href="/"><Home size={15} /> Home</Link><span>/</span><Link href="/blog">Insights</Link><span>/</span><span>{post.categories[0]?.name || "Article"}</span></nav>
+      <div className="article-hero__content">{post.categories[0] && <Link className="blog-pill" href={`/blog?category=${post.categories[0].id}`}>{post.categories[0].name}</Link>}<h1>{post.title}</h1><p>{post.excerpt}</p><div className="article-byline"><div className="article-avatar">{post.author.avatarUrl ? <Image src={post.author.avatarUrl} alt={post.author.name} fill sizes="48px" /> : post.author.name.charAt(0)}</div><div><strong>{post.author.name}</strong><span><CalendarDays size={14} /> {date} <i /> <Clock size={14} /> {readingTime(post.content)} min read</span></div></div></div>
+    </div></header>
 
-  const formattedDate = new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  }).format(new Date(post.date));
-
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {faqSchema && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      )}
-
-      <article className="min-h-screen bg-black text-gray-200 pt-24 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Breadcrumbs */}
-          <nav className="flex text-sm text-gray-400 mb-8" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <span className="mx-2">/</span>
-                  <Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <span className="mx-2">/</span>
-                  <span className="text-gray-500 line-clamp-1">{post.title}</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-
-          {/* Header */}
-          <header className="mb-12">
-            {post.categories && post.categories.length > 0 && (
-              <div className="mb-4 flex gap-2">
-                {post.categories.map((cat: string) => (
-                  <span key={cat} className="text-blue-400 font-semibold text-sm uppercase tracking-wider">
-                    {cat}
-                  </span>
-                ))}
-              </div>
-            )}
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-              {post.title}
-            </h1>
-            <div className="flex items-center text-gray-400 text-sm space-x-4">
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 flex items-center justify-center text-white font-bold mr-3 shadow-lg">
-                  {post.author.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold text-white">{post.author}</p>
-                  <p>{formattedDate}</p>
-                </div>
-              </div>
-            </div>
-          </header>
-
-          {/* Featured Image */}
-          {post.featuredImage && (
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-16 shadow-2xl border border-white/10">
-              <Image
-                src={post.featuredImage}
-                alt={post.title}
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 1024px"
-              />
-            </div>
-          )}
-
-          {/* Content */}
-          <div 
-            className="prose prose-invert prose-blue max-w-none text-lg leading-relaxed 
-                       prose-headings:text-white prose-a:text-blue-400 hover:prose-a:text-blue-300 
-                       prose-img:rounded-xl prose-img:shadow-lg prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
-
-          {/* FAQ Section */}
-          {post.faqs && post.faqs.length > 0 && (
-            <div className="mt-16 pt-12 border-t border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-6">
-                {post.faqs.map((faq: any, index: number) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                    <p className="text-gray-400">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Tags */}
-          {post.tags && post.tags.length > 0 && (
-            <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-2">
-              <span className="text-white font-semibold mr-2 flex items-center">Tags:</span>
-              {post.tags.map((tag: string) => (
-                <span key={tag} className="px-3 py-1 bg-white/5 text-gray-300 rounded-full text-sm hover:bg-white/10 transition-colors border border-white/10">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
+    <div className="blog-container article-shell">
+      <div className="article-layout">
+        <aside className="article-sidebar">{items.length > 0 && <nav className="article-toc" aria-label="Table of contents"><span className="blog-kicker">On this page</span><ol>{items.map((item) => <li key={item.id} className={item.level === 3 ? "is-sub" : ""}><a href={`#${item.id}`}>{item.text}</a></li>)}</ol></nav>}<SocialShare url={postUrl} title={post.title} /></aside>
+        <div className="article-main"><article className="wp-article-content" dangerouslySetInnerHTML={{ __html: html }} />
+          {post.faqs.length > 0 && <section className="article-faq" aria-labelledby="article-faq-title"><span className="blog-kicker">Quick answers</span><h2 id="article-faq-title">Frequently asked questions</h2>{post.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</section>}
+          <section className="author-box"><div className="author-box__avatar">{post.author.avatarUrl ? <Image src={post.author.avatarUrl} alt={post.author.name} fill sizes="72px" /> : post.author.name.charAt(0)}</div><div><span className="blog-kicker">Written by</span><h2>{post.author.name}</h2><p>{post.author.description}</p></div></section>
+          <nav className="article-pager" aria-label="Post navigation">{previous ? <Link href={`/blog/${previous.slug}`}><ArrowLeft size={19} /><span><small>Previous insight</small>{previous.title}</span></Link> : <span />}{next && <Link href={`/blog/${next.slug}`}><span><small>Next insight</small>{next.title}</span><ArrowRight size={19} /></Link>}</nav>
         </div>
-      </article>
-    </>
-  );
+      </div>
+    </div>
+
+    {related.length > 0 && <section className="article-related"><div className="blog-container"><div className="blog-section-heading"><div><span className="blog-kicker">Keep exploring</span><h2>Related insights</h2></div><Link href="/blog">View all <ArrowRight size={18} /></Link></div><div className="blog-grid">{related.map((item) => <BlogCard key={item.id} post={item} />)}</div></div></section>}
+    <section className="article-cta"><div className="blog-container article-cta__inner"><div><span className="blog-kicker"><Sparkles size={15} /> Turn insight into impact</span><h2>Ready to build your next growth advantage?</h2><p>Let&apos;s turn the right strategy into measurable momentum for your brand.</p></div><Link href="/contact">Start a conversation <ArrowRight size={19} /></Link></div></section>
+    <div className="blog-container"><Newsletter compact /></div>
+  </main>;
 }

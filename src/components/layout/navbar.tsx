@@ -30,6 +30,7 @@ const navLinks = [
   { name: "Free SEO Audit", href: "/get-free-seo-audit" },
   { name: "Why Us", href: "/#why-us" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -70,7 +71,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-5">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               <Link
@@ -108,7 +109,7 @@ export function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <Button className={cn(
             "shadow-md",
             !isScrolled && "bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20"
@@ -120,7 +121,7 @@ export function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           className={cn(
-            "md:hidden p-2 transition-colors",
+            "xl:hidden p-2 transition-colors",
             isScrolled ? "text-foreground" : "text-white"
           )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -131,7 +132,7 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg py-4 px-4 flex flex-col gap-2 max-h-[80vh] overflow-y-auto">
+        <div className="xl:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg py-4 px-4 flex flex-col gap-2 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) => (
             <div key={link.name} className="flex flex-col">
               {link.submenu ? (

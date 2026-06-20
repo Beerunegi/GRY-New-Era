@@ -5,12 +5,9 @@ import { PPCCaseStudies } from "@/components/sections/ppc-case-studies";
 import { PPCFAQ } from "@/components/sections/ppc-faq";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "PPC Advertising & Google Ads Services | New Digital Era",
-  description: "Maximize your ROAS with data-driven PPC management. Specialized in Search Ads, Display Ads, and Performance Marketing to drive instant leads.",
-};
+export const metadata = createMetadata({ title: "Google Ads & PPC Agency in Ghaziabad", description: "Generate qualified leads with Google Ads, paid social and conversion-focused PPC management from our Ghaziabad performance marketing team.", path: "/services/ppc", keywords: ["PPC agency Ghaziabad", "Google Ads company Ghaziabad", "performance marketing Delhi NCR"] });
 
 export default function PPCPage() {
   return (

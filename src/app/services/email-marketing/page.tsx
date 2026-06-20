@@ -7,12 +7,9 @@ import { EmailFAQ } from "@/components/sections/email-faq";
 import { PPCCaseStudies } from "@/components/sections/ppc-case-studies";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Email Marketing & Automation Services | New Digital Era",
-  description: "Drive sales and customer retention with expert email marketing services. We build automated flows and high-converting newsletters.",
-};
+export const metadata = createMetadata({ title: "Email Marketing & Automation Services", description: "Increase revenue and retention with lifecycle strategy, automated email flows, segmentation, newsletters and conversion-focused campaign optimization.", path: "/services/email-marketing", keywords: ["email marketing agency India", "email automation services", "ecommerce email marketing Delhi NCR"] });
 
 export default function EmailMarketingPage() {
   return (

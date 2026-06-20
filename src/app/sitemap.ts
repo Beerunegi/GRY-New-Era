@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getMetadataBase, getSitemapRoutes } from "@/lib/site";
-import { getAllPosts } from "@/lib/blog";
+import { getPosts } from "@/lib/wordpress";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const metadataBase = getMetadataBase().toString();
   
   // App router static routes
@@ -14,11 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Blog dynamic routes
-  const posts = getAllPosts(['slug', 'date']);
+  const posts = await getPosts({ perPage: 100 });
   const blogRoutes = posts.map((post) => ({
     url: `${metadataBase}/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: "monthly" as "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 

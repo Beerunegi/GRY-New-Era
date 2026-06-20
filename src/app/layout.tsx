@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { getMetadataBase } from "@/lib/site";
+import { business, getBusinessSchemas } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,8 +19,16 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
-  title: "New Digital Era | Digital Marketing Agency",
-  description: "We help ambitious businesses scale through data-driven digital marketing and premium web experiences.",
+  title: {
+    default: "Digital Marketing Agency in Ghaziabad | New Digital Era",
+    template: "%s | New Digital Era",
+  },
+  description: "New Digital Era is a digital marketing agency in Ghaziabad helping businesses grow with SEO, AEO, GEO, Google Ads, social media and high-performance websites.",
+  applicationName: business.name,
+  category: "Digital Marketing",
+  creator: business.name,
+  publisher: business.name,
+  formatDetection: { email: false, address: false, telephone: false },
 };
 
 export default function RootLayout({
@@ -27,9 +36,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schemas = getBusinessSchemas(getMetadataBase().toString().replace(/\/$/, ""));
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col`}>
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
+        ))}
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

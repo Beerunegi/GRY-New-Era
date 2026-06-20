@@ -5,12 +5,9 @@ import { AIOCaseStudies } from "@/components/sections/aio-case-studies";
 import { AIOFAQ } from "@/components/sections/aio-faq";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "AI Optimization (AIO) & GEO Services | New Digital Era",
-  description: "Get cited by Perplexity, SearchGPT, and Gemini. Our AI Optimization (AIO) and Generative Engine Optimization (GEO) services future-proof your brand for the age of LLMs.",
-};
+export const metadata = createMetadata({ title: "AI Optimization & AEO Services in India", description: "Improve brand visibility across AI Overviews, ChatGPT, Gemini and Perplexity with entity-led AIO, answer engine optimization and structured content.", path: "/services/ai-optimization", keywords: ["AI optimization services India", "AEO agency India", "AI search optimization Ghaziabad", "LLM visibility services"] });
 
 export default function AIOPage() {
   return (

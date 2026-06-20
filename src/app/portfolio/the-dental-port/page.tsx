@@ -16,11 +16,9 @@ import {
 } from "lucide-react";
 import { CTASection } from "@/components/sections/cta-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "WordPress Website Development for The Dental Port | Case Study",
-  description: "Discover how we built a high-performing, mobile-optimized WordPress website for a premier dental clinic, resulting in better online presence and lead generation.",
-};
+export const metadata = createMetadata({ title: "Local SEO Website for a Noida Dental Clinic", description: "See how New Digital Era created a fast, mobile-first WordPress website and local search foundation for The Dental Port in Sector 168, Noida.", path: "/portfolio/the-dental-port", keywords: ["dental website design Noida", "local SEO dental clinic", "WordPress development case study"] });
 
 export default function TheDentalPortCaseStudy() {
   return (

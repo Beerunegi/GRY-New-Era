@@ -8,20 +8,20 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    description: "Mon-Fri from 9am to 6pm.",
-    detail: "+1 (555) 123-4567"
+    description: "Mon-Fri from 8am to 5pm.",
+    detail: "+91 98712 64699"
   },
   {
     icon: Mail,
     title: "Email Us",
     description: "Our team will reply within 24 hours.",
-    detail: "hello@newdigitalera.com"
+    detail: "info@newdigitalera.in"
   },
   {
     icon: MapPin,
     title: "Visit Us",
-    description: "Come say hello at our HQ.",
-    detail: "123 Innovation Dr, Tech City"
+    description: "Our Ghaziabad headquarters.",
+    detail: "Sector 5, Sahibabad, Ghaziabad"
   },
   {
     icon: MessageSquare,
@@ -51,7 +51,7 @@ export function ContactHero() {
             Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary">Level Up?</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Whether you need a comprehensive digital strategy, an SEO overhaul, or a stunning new website, our team of experts is ready to help you dominate your market.
+            Meet our Ghaziabad digital marketing team for SEO, AEO, GEO, paid media and website strategy built around measurable business growth.
           </p>
         </motion.div>
       </div>

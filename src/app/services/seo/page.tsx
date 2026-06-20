@@ -5,12 +5,9 @@ import { SEOCaseStudies } from "@/components/sections/seo-case-studies";
 import { SEOFAQ } from "@/components/sections/seo-faq";
 import { ContactSection } from "@/components/sections/contact-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Premium SEO Services | New Digital Era",
-  description: "Scale your organic visibility with our data-driven SEO services. specialized in Technical SEO, On-Page optimization, and Authority building.",
-};
+export const metadata = createMetadata({ title: "SEO Company in Ghaziabad | Local & Technical SEO", description: "Grow rankings, Google Maps visibility and qualified leads with local, technical and on-page SEO services from our Ghaziabad SEO team serving Delhi NCR.", path: "/services/seo", keywords: ["SEO company in Ghaziabad", "local SEO Ghaziabad", "SEO agency Delhi NCR", "Google Maps SEO"] });
 
 export default function SEOPage() {
   return (
