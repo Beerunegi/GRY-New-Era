@@ -18,8 +18,25 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
+interface PostFormData {
+  title: string;
+  slug: string;
+  date: string;
+  author: string;
+  excerpt: string;
+  featuredImage: string;
+  featuredImageAlt: string;
+  content: string;
+  metaTitle: string;
+  metaDescription: string;
+  categories: string[];
+  tags: string[];
+  faqs: { question: string; answer: string }[];
+  customSchema: string;
+}
+
 interface PostFormProps {
-  initialData?: any;
+  initialData?: Partial<PostFormData>;
   isEditing?: boolean;
 }
 
@@ -30,7 +47,7 @@ export default function PostForm({ initialData, isEditing }: PostFormProps) {
   const [activeTab, setActiveTab] = useState('general'); // general, content, seo, schema
   const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<PostFormData>({
     title: '',
     slug: '',
     date: new Date().toISOString(),
@@ -41,9 +58,9 @@ export default function PostForm({ initialData, isEditing }: PostFormProps) {
     content: '',
     metaTitle: '',
     metaDescription: '',
-    categories: [] as string[],
-    tags: [] as string[],
-    faqs: [] as { question: string; answer: string }[],
+    categories: [],
+    tags: [],
+    faqs: [],
     customSchema: '',
     ...initialData
   });
@@ -62,7 +79,8 @@ export default function PostForm({ initialData, isEditing }: PostFormProps) {
   }, [formData.title, isEditing]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const name = e.target.name as keyof PostFormData;
+    const { value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
