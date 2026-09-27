@@ -10,7 +10,6 @@ const programs = [
     title: "3-Month Certificate",
     duration: "12 Weeks",
     level: "Foundation",
-    price: "₹24,999",
     description: "Perfect for beginners and business owners wanting to understand the core digital ecosystem.",
     features: [
       "SEO Fundamentals",
@@ -27,7 +26,6 @@ const programs = [
     title: "6-Month Advanced",
     duration: "24 Weeks",
     level: "Intermediate to Pro",
-    price: "₹44,999",
     description: "The gold standard for aspiring digital marketers looking for career transformation.",
     features: [
       "Everything in 3-Month",
@@ -44,7 +42,6 @@ const programs = [
     title: "1-Year Diploma",
     duration: "48 Weeks",
     level: "Master",
-    price: "₹79,999",
     description: "Comprehensive masterclass covering design, dev, and full-stack digital leadership.",
     features: [
       "Everything in 6-Month",
@@ -119,13 +116,15 @@ export function CoursePrograms() {
             </div>
 
             <div className="mt-auto pt-8 border-t border-border/50">
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-black">{program.price}</span>
-                <span className="text-base text-muted-foreground">/ one-time</span>
+              <div className="flex flex-col gap-1 mb-6">
+                <span className="text-lg font-black text-foreground">100% Offline Classroom</span>
+                <span className="text-xs text-primary font-bold uppercase tracking-wider">Placement Assistance Included</span>
               </div>
-              <Button className={`w-full h-12 rounded-xl text-base font-bold ${program.highlight ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "bg-muted text-foreground hover:bg-primary hover:text-primary-foreground"}`}>
-                Download Brochure
-              </Button>
+              <a href="#register">
+                <Button className={`w-full h-12 rounded-xl text-base font-bold ${program.highlight ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "bg-muted text-foreground hover:bg-primary hover:text-primary-foreground"}`}>
+                  Enquire & Download Syllabus
+                </Button>
+              </a>
             </div>
           </motion.div>
         ))}

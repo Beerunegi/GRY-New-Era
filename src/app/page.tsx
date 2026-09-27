@@ -1,43 +1,43 @@
-import { Hero } from "@/components/sections/hero";
-import { ClientsMarquee } from "@/components/sections/clients-marquee";
-import { ServicesSection } from "@/components/sections/services-section";
-import { CourseSection } from "@/components/sections/course-section";
-import { WhyUsSection } from "@/components/sections/why-us-section";
+import { AcademyHero } from "@/components/sections/academy-hero";
+import { HomeCoursesGrid } from "@/components/sections/home-courses-grid";
+import { CourseFeatures } from "@/components/sections/course-features";
+import { AcademyMethodology } from "@/components/sections/academy-methodology";
+import { AcademyToolsStack } from "@/components/sections/academy-tools-stack";
 import { PartnersSection } from "@/components/sections/partners-section";
-import { ProcessSection } from "@/components/sections/process-section";
-import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
-import { BlogSection } from "@/components/sections/blog-section";
-import { HomeFAQ } from "@/components/sections/home-faq";
-import { AuditSection } from "@/components/sections/audit-section";
+import { AcademyFAQ } from "@/components/sections/academy-faq";
+import { CourseRegistrationForm } from "@/components/sections/course-registration-form";
 import { CTASection } from "@/components/sections/cta-section";
-import { ContactSection } from "@/components/sections/contact-section";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Digital Marketing Agency in Ghaziabad",
-  description: "Grow with a results-driven digital marketing agency in Ghaziabad. New Digital Era delivers SEO, AEO, GEO, PPC, social media and website development across Delhi NCR.",
+  title: "Digital Marketing & AI Courses in Ghaziabad | 100% Offline Training",
+  description:
+    "Launch your career with practical offline courses in Digital Marketing, Web Development, Generative AI, SEO, and Performance Marketing at New Digital Era Academy Ghaziabad with 100% placement support.",
   path: "/",
-  keywords: ["digital marketing agency in Ghaziabad", "SEO company Ghaziabad", "digital marketing Delhi NCR", "AEO agency India", "GEO services India"],
+  keywords: [
+    "digital marketing course in Ghaziabad",
+    "web development course Delhi NCR",
+    "AI automation institute Ghaziabad",
+    "SEO training institute Sahibabad",
+    "offline digital marketing classes Ghaziabad",
+    "performance marketing course Delhi NCR",
+  ],
 });
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <ClientsMarquee />
-      <ServicesSection />
-      <CourseSection />
-      <WhyUsSection />
+      <AcademyHero />
+      <HomeCoursesGrid />
+      <CourseFeatures />
+      <AcademyMethodology />
+      <AcademyToolsStack />
       <PartnersSection />
-      <ProcessSection />
-      <PortfolioSection />
       <TestimonialsSection />
-      <BlogSection />
-      <HomeFAQ />
-      <AuditSection />
+      <AcademyFAQ />
+      <CourseRegistrationForm />
       <CTASection />
-      <ContactSection />
     </>
   );
 }

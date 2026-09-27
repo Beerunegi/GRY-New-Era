@@ -59,10 +59,17 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6">Company</h4>
-            <ul className="space-y-4 text-base text-muted-foreground">
+            <h4 className="font-semibold mb-6">Company & Academy</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/courses" className="hover:text-primary transition-colors">Our Academy</Link></li>
+              <li><Link href="/courses" className="hover:text-primary transition-colors font-semibold text-foreground">All Courses (Overview)</Link></li>
+              <li><Link href="/courses/digital-marketing-generative-ai" className="hover:text-primary transition-colors">Digital Marketing + GenAI</Link></li>
+              <li><Link href="/courses/web-development-ai" className="hover:text-primary transition-colors">Web Development + AI</Link></li>
+              <li><Link href="/courses/social-media-content-marketing" className="hover:text-primary transition-colors">Social Media & Content</Link></li>
+              <li><Link href="/courses/performance-marketing-analytics" className="hover:text-primary transition-colors">Performance Marketing</Link></li>
+              <li><Link href="/courses/seo-aeo-geo" className="hover:text-primary transition-colors">SEO + AEO + GEO</Link></li>
+              <li><Link href="/courses/generative-ai-automation" className="hover:text-primary transition-colors">Generative AI + Automation</Link></li>
+              <li><Link href="/courses/wordpress-shopify-development" className="hover:text-primary transition-colors">WordPress + Shopify</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
               <li><Link href="/blog" className="hover:text-primary transition-colors">Blog & Insights</Link></li>
               <li><Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>

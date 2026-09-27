@@ -26,7 +26,20 @@ const navLinks = [
       { name: "Generative Engine Optimization (GEO)", href: "/services/generative-engine-optimization" }
     ]
   },
-  { name: "Courses", href: "/courses" },
+  { 
+    name: "Courses", 
+    href: "/courses",
+    submenu: [
+      { name: "Digital Marketing + GenAI (6M)", href: "/courses/digital-marketing-generative-ai" },
+      { name: "Web Development + AI (6M)", href: "/courses/web-development-ai" },
+      { name: "Social Media & Content (3M)", href: "/courses/social-media-content-marketing" },
+      { name: "Performance Marketing (3M)", href: "/courses/performance-marketing-analytics" },
+      { name: "SEO + AEO + GEO (6M)", href: "/courses/seo-aeo-geo" },
+      { name: "Generative AI + Automation (6M)", href: "/courses/generative-ai-automation" },
+      { name: "WordPress + Shopify (6M)", href: "/courses/wordpress-shopify-development" },
+      { name: "View All Programs →", href: "/courses" },
+    ]
+  },
   { name: "Free SEO Audit", href: "/get-free-seo-audit" },
   { name: "Why Us", href: "/#why-us" },
   { name: "Portfolio", href: "/portfolio" },
@@ -37,7 +50,7 @@ const navLinks = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,20 +151,20 @@ export function Navbar() {
               {link.submenu ? (
                 <>
                   <button 
-                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    onClick={() => setOpenSubmenu(openSubmenu === link.name ? null : link.name)}
                     className="flex flex-row items-center justify-between text-lg font-medium text-foreground py-3 border-b border-border/50 text-left"
                   >
                     {link.name}
-                    <ChevronDown className={cn("w-4 h-4 transition-transform", mobileServicesOpen && "rotate-180")} />
+                    <ChevronDown className={cn("w-4 h-4 transition-transform", openSubmenu === link.name && "rotate-180")} />
                   </button>
-                  {mobileServicesOpen && (
+                  {openSubmenu === link.name && (
                     <div className="flex flex-col pl-4 py-2 bg-muted/20 border-b border-border/50">
                       <Link 
-                        href="/services" 
+                        href={link.href} 
                         className="py-2.5 text-base font-bold text-primary"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        View All Services →
+                        View All {link.name} →
                       </Link>
                       {link.submenu.map((subItem) => (
                         <Link
